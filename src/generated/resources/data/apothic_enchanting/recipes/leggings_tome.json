@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "apothic_enchanting",
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "L": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "pattern": [
+    "B B",
+    "BLB",
+    "BBB"
+  ],
+  "result": {
+    "count": 7,
+    "item": "apothic_enchanting:leggings_tome"
+  }
+}

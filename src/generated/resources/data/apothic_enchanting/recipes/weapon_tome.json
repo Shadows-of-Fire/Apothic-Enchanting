@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "apothic_enchanting",
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "L": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "pattern": [
+    "B",
+    "B",
+    "L"
+  ],
+  "result": {
+    "count": 2,
+    "item": "apothic_enchanting:weapon_tome"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "apothic_enchanting",
+  "key": {
+    "B": {
+      "tag": "forge:bookshelves"
+    },
+    "G": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "M": {
+      "item": "minecraft:melon"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "GBG",
+    "MMM"
+  ],
+  "result": {
+    "item": "apothic_enchanting:melonshelf"
+  }
+}

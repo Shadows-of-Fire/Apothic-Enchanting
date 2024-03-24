@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "apothic_enchanting",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "N": {
+      "item": "minecraft:nether_bricks"
+    },
+    "O": {
+      "tag": "forge:bookshelves"
+    },
+    "P": {
+      "type": "neoforge:nbt",
+      "item": "minecraft:potion",
+      "tag": "{Potion:\"minecraft:regeneration\"}"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "BOP",
+    "NNN"
+  ],
+  "result": {
+    "item": "apothic_enchanting:hellshelf"
+  }
+}

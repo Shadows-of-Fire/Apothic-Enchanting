@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "apothic_enchanting",
+  "key": {
+    "D": {
+      "item": "apothic_enchanting:endshelf"
+    },
+    "E": {
+      "item": "minecraft:end_rod"
+    },
+    "N": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "E E",
+    "NDN",
+    "E E"
+  ],
+  "result": {
+    "item": "apothic_enchanting:pearl_endshelf"
+  }
+}
