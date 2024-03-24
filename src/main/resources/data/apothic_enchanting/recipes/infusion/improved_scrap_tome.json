@@ -1,0 +1,20 @@
+{
+	"type": "apothic_enchanting:infusion",
+	"input": {
+		"item": "apothic_enchanting:scrap_tome"
+	},
+	"requirements": {
+		"eterna": 22.5,
+		"quanta": 25,
+		"arcana": 35
+	},
+	"max_requirements": {
+		"eterna": -1,
+		"quanta": 50,
+		"arcana": -1
+	},
+	"result": {
+		"item": "apothic_enchanting:improved_scrap_tome",
+		"count": 4
+	}
+}

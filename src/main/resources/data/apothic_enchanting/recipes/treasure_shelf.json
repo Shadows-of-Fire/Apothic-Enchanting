@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "pattern": [
+    "GSG",
+    "DED",
+    "GSG"
+  ],
+  "key": {
+    "G": {
+      "tag": "forge:storage_blocks/gold"
+    },
+	"S": {
+      "item": "apothic_enchanting:deepshelf"
+    },
+	"D": {
+      "tag": "forge:gems/diamond"
+    },
+	"E": {
+      "tag": "forge:storage_blocks/emerald"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:treasure_shelf",
+    "count": 1
+  }
+}

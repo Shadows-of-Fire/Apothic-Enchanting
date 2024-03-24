@@ -1,0 +1,5 @@
+{
+    "variants": {
+		"": { "model": "apothic_enchanting:block/rectifier_t2" }
+    }
+}

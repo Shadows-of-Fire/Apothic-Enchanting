@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lemons",
+  "pattern": [
+    " T ",
+    "SBS",
+    "SCS"
+  ],
+  "key": {
+    "T": {
+      "item": "apothic_enchanting:warden_tendril"
+    },
+	"B": {
+      "item": "apothic_enchanting:echoing_deepshelf"
+    },
+	"S": {
+      "item": "minecraft:sculk"
+    },
+	"C": {
+      "item": "minecraft:sculk_catalyst"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:echoing_sculkshelf",
+    "count": 1
+  }
+}

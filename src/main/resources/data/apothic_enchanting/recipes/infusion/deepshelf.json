@@ -1,0 +1,15 @@
+{
+	"type": "apothic_enchanting:infusion",
+	"input": {
+		"item": "apothic_enchanting:dormant_deepshelf"
+	},
+	"requirements": {
+		"eterna": 30,
+		"quanta": 40,
+		"arcana": 40
+	},
+	"result": {
+		"item": "apothic_enchanting:deepshelf",
+		"count": 1
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lemons",
+  "pattern": [
+    "EEE",
+    "BBB",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:cracked_deepslate_tiles"
+    },
+	"B": {
+      "item": "minecraft:book"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:dormant_deepshelf",
+    "count": 1
+  }
+}

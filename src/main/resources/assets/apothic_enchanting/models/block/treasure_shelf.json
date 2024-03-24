@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "apothic_enchanting:blocks/treasure_shelf_top",
+        "side": "apothic_enchanting:blocks/treasure_shelf_side"
+    }
+}

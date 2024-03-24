@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "apothic_enchanting:block/ender_library",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "apothic_enchanting:block/ender_library",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "apothic_enchanting:block/ender_library"
+    },
+    "facing=west": {
+      "model": "apothic_enchanting:block/ender_library",
+      "y": 90
+    }
+  }
+}

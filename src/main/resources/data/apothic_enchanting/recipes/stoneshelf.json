@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lemons",
+  "pattern": [
+    "EEE",
+    "BBB",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:polished_andesite"
+    },
+	"B": {
+      "item": "minecraft:book"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:stoneshelf",
+    "count": 1
+  }
+}

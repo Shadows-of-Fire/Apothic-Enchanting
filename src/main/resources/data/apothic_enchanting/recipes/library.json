@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lemons",
+  "pattern": [
+    "CSC",
+    "STS",
+    "CSC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:ender_chest"
+    },
+	"S": {
+      "tag": "apothic_enchanting:infused_shelves"
+    },
+	"T": {
+      "item": "minecraft:enchanting_table"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:library",
+    "count": 1
+  }
+}

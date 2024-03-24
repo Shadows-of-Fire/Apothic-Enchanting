@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lemons",
+  "pattern": [
+    " E ",
+    " B ",
+    "CCC"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:soul_lantern"
+    },
+	"B": {
+      "item": "apothic_enchanting:deepshelf"
+    },
+	"C": {
+      "item": "minecraft:sculk"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:soul_touched_deepshelf",
+    "count": 1
+  }
+}

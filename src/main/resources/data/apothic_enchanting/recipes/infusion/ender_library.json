@@ -1,0 +1,20 @@
+{
+	"type": "apothic_enchanting:keep_nbt_infusion",
+	"input": {
+		"item": "apothic_enchanting:library"
+	},
+	"requirements": {
+		"eterna": 50,
+		"quanta": 45,
+		"arcana": 100
+	},
+	"max_requirements": {
+		"eterna": 50,
+		"quanta": 50,
+		"arcana": 100
+	},
+	"result": {
+		"item": "apothic_enchanting:ender_library",
+		"count": 1
+	}
+}

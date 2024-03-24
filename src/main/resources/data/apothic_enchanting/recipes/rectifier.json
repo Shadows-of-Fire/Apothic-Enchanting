@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "pattern": [
+    "AHA",
+    "HSH",
+    "AHA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_block"
+    },
+	"H": {
+      "item": "minecraft:honeycomb_block"
+    },
+	"S": {
+      "item": "apothic_enchanting:infused_seashelf"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:rectifier",
+    "count": 1
+  }
+}

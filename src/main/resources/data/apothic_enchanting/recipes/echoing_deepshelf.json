@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lemons",
+  "pattern": [
+    " E ",
+    " B ",
+    "CCC"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+	"B": {
+      "item": "apothic_enchanting:deepshelf"
+    },
+	"C": {
+      "tag": "minecraft:candles"
+    }
+  },
+  "result": {
+    "item": "apothic_enchanting:echoing_deepshelf",
+    "count": 1
+  }
+}

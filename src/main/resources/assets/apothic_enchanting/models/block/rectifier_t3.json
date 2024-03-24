@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "block/purpur_block",
+        "side": "apothic_enchanting:blocks/rectifier_t3"
+    }
+}

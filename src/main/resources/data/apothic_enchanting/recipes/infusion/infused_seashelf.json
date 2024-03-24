@@ -1,0 +1,16 @@
+{
+	"type": "apothic_enchanting:infusion",
+	"input": {
+		"item": "apothic_enchanting:seashelf"
+	},
+	"requirements": {
+		"eterna": 22.5,
+		"quanta": 15,
+		"arcana": 10
+	},
+	"display_level": 5,
+	"result": {
+		"item": "apothic_enchanting:infused_seashelf",
+		"count": 1
+	}
+}
