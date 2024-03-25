@@ -14,11 +14,14 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import dev.shadowsoffire.apothic_enchanting.ApothicEnchanting;
 import dev.shadowsoffire.apothic_enchanting.table.ApothEnchantmentMenu.Arcana;
 import dev.shadowsoffire.apothic_enchanting.table.RealEnchantmentHelper.ArcanaEnchantmentData;
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractSliderButton;
+import net.minecraft.client.gui.components.Renderable;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
@@ -55,7 +58,7 @@ public class EnchantingInfoScreen extends Screen {
     Map<Enchantment, List<Enchantment>> exclusions = new HashMap<>();
 
     public EnchantingInfoScreen(ApothEnchantScreen parent) {
-        super(Component.translatable("info.apotheosis.enchinfo_title"));
+        super(TooltipUtil.lang("menu", "enchanting_info"));
         this.parent = parent;
         this.imageWidth = 240;
         this.imageHeight = 170;
@@ -86,8 +89,6 @@ public class EnchantingInfoScreen extends Screen {
 
     @Override
     public void render(GuiGraphics gfx, int pMouseX, int pMouseY, float pPartialTick) {
-        this.renderBackground(gfx, pMouseY, pMouseY, pPartialTick);
-
         PoseStack pose = gfx.pose();
         pose.pushPose();
         pose.translate(this.leftPos, this.topPos, 0);
@@ -99,7 +100,7 @@ public class EnchantingInfoScreen extends Screen {
                 u += 19;
                 v += 16;
             }
-            else if (this.selectedSlot == i || this.isHovering(8, 18 + 19 * i, 18, 18, pMouseX, pMouseY)) {
+            else if (this.selectedSlot == i || this.isHovering(8, 18 + 18 * i, 18, 16, pMouseX, pMouseY)) {
                 u += 38;
             }
             gfx.blit(TEXTURES, 8, 18 + 19 * i, 224, u, 18, 19);
@@ -132,11 +133,11 @@ public class EnchantingInfoScreen extends Screen {
 
         List<Component> list = new ArrayList<>();
         Arcana a = Arcana.getForThreshold(this.parent.getMenu().stats.arcana());
-        list.add(Component.translatable("info.apotheosis.weights").withStyle(ChatFormatting.UNDERLINE, ChatFormatting.YELLOW));
-        list.add(Component.translatable("info.apotheosis.weight", I18n.get("rarity.enchantment.common"), a.rarities[0]).withStyle(ChatFormatting.GRAY));
-        list.add(Component.translatable("info.apotheosis.weight", I18n.get("rarity.enchantment.uncommon"), a.rarities[1]).withStyle(ChatFormatting.GREEN));
-        list.add(Component.translatable("info.apotheosis.weight", I18n.get("rarity.enchantment.rare"), a.rarities[2]).withStyle(ChatFormatting.BLUE));
-        list.add(Component.translatable("info.apotheosis.weight", I18n.get("rarity.enchantment.very_rare"), a.rarities[3]).withStyle(ChatFormatting.GOLD));
+        list.add(TooltipUtil.lang("info", "weights").withStyle(ChatFormatting.UNDERLINE, ChatFormatting.YELLOW));
+        list.add(TooltipUtil.lang("info", "weight", I18n.get("rarity.enchantment.common"), a.rarities[0]).withStyle(ChatFormatting.GRAY));
+        list.add(TooltipUtil.lang("info", "weight", I18n.get("rarity.enchantment.uncommon"), a.rarities[1]).withStyle(ChatFormatting.GREEN));
+        list.add(TooltipUtil.lang("info", "weight", I18n.get("rarity.enchantment.rare"), a.rarities[2]).withStyle(ChatFormatting.BLUE));
+        list.add(TooltipUtil.lang("info", "weight", I18n.get("rarity.enchantment.very_rare"), a.rarities[3]).withStyle(ChatFormatting.GOLD));
         gfx.renderComponentTooltip(this.font, list, a == Arcana.MAX ? -2 : 1, 120);
 
         gfx.drawString(this.font, this.title, 7, 4, 4210752, false);
@@ -144,12 +145,12 @@ public class EnchantingInfoScreen extends Screen {
         pose.translate(0, 0, 10);
 
         for (int i = 0; i < 3; i++) {
-            if (this.isHovering(8, 18 + 19 * i, 18, 18, pMouseX, pMouseY)) {
+            if (this.isHovering(8, 18 + 18 * i, 18, 16, pMouseX, pMouseY)) {
                 list.clear();
-                list.add(Component.translatable("info.apotheosis.enchinfo_slot", i + 1).withStyle(ChatFormatting.GOLD, ChatFormatting.UNDERLINE));
-                list.add(Component.translatable("info.apotheosis.enchinfo_level", this.costs[i]).withStyle(ChatFormatting.GREEN));
-                list.add(Component.translatable("info.apotheosis.enchinfo_minpow", this.powers[i][0]).withStyle(ChatFormatting.DARK_RED));
-                list.add(Component.translatable("info.apotheosis.enchinfo_maxpow", this.powers[i][1]).withStyle(ChatFormatting.BLUE));
+                list.add(TooltipUtil.lang("info", "enchinfo_slot", i + 1).withStyle(ChatFormatting.GOLD, ChatFormatting.UNDERLINE));
+                list.add(TooltipUtil.lang("info", "enchinfo_level", this.costs[i]).withStyle(ChatFormatting.GREEN));
+                list.add(TooltipUtil.lang("info", "enchinfo_minpow", this.powers[i][0]).withStyle(ChatFormatting.RED));
+                list.add(TooltipUtil.lang("info", "enchinfo_maxpow", this.powers[i][1]).withStyle(ChatFormatting.BLUE));
                 gfx.renderComponentTooltip(this.font, list, pMouseX, pMouseY);
             }
         }
@@ -157,10 +158,10 @@ public class EnchantingInfoScreen extends Screen {
         if (hover != null) {
             list.clear();
             list.add(Component.translatable(hover.getEnch().getDescriptionId()).withStyle(getColor(hover.getEnch()), ChatFormatting.UNDERLINE));
-            list.add(Component.translatable("info.apotheosis.enchinfo_level", Component.translatable("enchantment.level." + hover.getLevel())).withStyle(ChatFormatting.DARK_AQUA));
+            list.add(TooltipUtil.lang("info", "enchinfo_level", Component.translatable("enchantment.level." + hover.getLevel())).withStyle(ChatFormatting.DARK_AQUA));
             Component rarity = Component.translatable("rarity.enchantment." + hover.getEnch().getRarity().name().toLowerCase(Locale.ROOT)).withStyle(colors[hover.getEnch().getRarity().ordinal()]);
-            list.add(Component.translatable("info.apotheosis.enchinfo_rarity", rarity).withStyle(ChatFormatting.DARK_AQUA));
-            list.add(Component.translatable("info.apotheosis.enchinfo_chance", String.format("%.2f", 100F * hover.getWeight().asInt() / WeightedRandom.getTotalWeight(this.enchantments)) + "%").withStyle(ChatFormatting.DARK_AQUA));
+            list.add(TooltipUtil.lang("info", "enchinfo_rarity", rarity).withStyle(ChatFormatting.DARK_AQUA));
+            list.add(TooltipUtil.lang("info", "enchinfo_chance", String.format("%.2f", 100F * hover.getWeight().asInt() / WeightedRandom.getTotalWeight(this.enchantments)) + "%").withStyle(ChatFormatting.DARK_AQUA));
             if (I18n.exists(hover.getEnch().getDescriptionId() + ".desc")) {
                 list.add(Component.translatable(hover.getEnch().getDescriptionId() + ".desc").withStyle(ChatFormatting.DARK_AQUA));
             }
@@ -177,8 +178,16 @@ public class EnchantingInfoScreen extends Screen {
         }
 
         gfx.renderFakeItem(this.toEnchant, this.leftPos + 49, this.topPos + 39);
+        if (this.isHovering(49, 39, 18, 18, pMouseX, pMouseY)) {
+            AbstractContainerScreen.renderSlotHighlight(gfx, this.leftPos + 49, this.topPos + 39, 0);
+            gfx.renderTooltip(font, toEnchant, pMouseX, pMouseY);
+        }
+
         pose.translate(0, 0, -10);
-        super.render(gfx, pMouseX, pMouseY, pPartialTick);
+
+        for (Renderable renderable : this.renderables) {
+            renderable.render(gfx, pMouseX, pMouseY, pPartialTick);
+        }
     }
 
     @Override
@@ -194,7 +203,7 @@ public class EnchantingInfoScreen extends Screen {
 
         for (int i = 0; i < 3; i++) {
             Enchantment clue = Enchantment.byId(this.clues[i]);
-            if (this.selectedSlot != i && clue != null && this.isHovering(8, 18 + 19 * i, 18, 18, pMouseX, pMouseY)) {
+            if (this.selectedSlot != i && clue != null && this.isHovering(8, 18 + 18 * i, 18, 16, pMouseX, pMouseY)) {
                 this.selectedSlot = i;
                 this.slider.setValue((this.slider.min() + this.slider.max()) / 2);
                 Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_BUTTON_CLICK, 1.0F));
@@ -302,7 +311,7 @@ public class EnchantingInfoScreen extends Screen {
 
         @Override
         protected void updateMessage() {
-            this.setMessage(Component.translatable("info.apotheosis.slider_power", EnchantingInfoScreen.this.currentPower));
+            this.setMessage(TooltipUtil.lang("info", "slider_power", EnchantingInfoScreen.this.currentPower));
         }
 
         @Override

@@ -6,6 +6,7 @@ import java.util.Random;
 
 import com.google.common.collect.Lists;
 
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -40,8 +41,8 @@ public class ScrappingTomeItem extends BookItem {
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flagIn) {
         if (stack.isEnchanted()) return;
-        tooltip.add(Component.translatable("info.apotheosis.scrap_tome").withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("info.apotheosis.scrap_tome2").withStyle(ChatFormatting.GRAY));
+        tooltip.add(TooltipUtil.lang("info", "scrap_tome").withStyle(ChatFormatting.GRAY));
+        tooltip.add(TooltipUtil.lang("info", "scrap_tome2").withStyle(ChatFormatting.GRAY));
     }
 
     @Override

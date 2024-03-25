@@ -1,4 +1,6 @@
 {
+    "creative_tab.apothic_enchanting.all": "Apotheosis - Enchanting Module",
+
     "block.apothic_enchanting.hellshelf": "Hellshelf",
     "block.apothic_enchanting.infused_hellshelf": "Infused Hellshelf",
     "block.apothic_enchanting.blazing_hellshelf": "Blazing Hellshelf",
@@ -93,7 +95,7 @@
     "info.apothic_enchanting.percent_at_most": "But no more than: %s%%",
     "info.apothic_enchanting.eterna_exact": "Requires exactly: %s/%s",
     "info.apothic_enchanting.percent_exact": "Requires exactly: %s%%",
-    "apothic_enchanting.recipes.infusion": "Infusion Enchanting",
+    "recipes.apothic_enchanting.infusion": "Infusion Enchanting",
     "info.apothic_enchanting.book_range": "Power Range: [%s, %s]",
     "info.apothic_enchanting.discoverable": "Discoverable",
     "info.apothic_enchanting.discoverable.not": "Not Discoverable",
@@ -223,7 +225,7 @@
     "enchantment.apothic_enchanting.endless_quiver": "Endless Quiver",
     "enchantment.apothic_enchanting.endless_quiver.desc": "Makes all arrows infinite.",
 
-    "apothic_enchanting.ench.library": "Enchantment Library",
+    "menu.apothic_enchanting.library": "Enchantment Library",
     "tooltip.enchlib.capacity": "Level Capacity: %s",
     "tooltip.enchlib.max_lvl": "Max Level Available: %s",
     "tooltip.enchlib.points": "Points Stored: %s/%s",
@@ -249,6 +251,7 @@
     "info.apothic_enchanting.anvil_at": "Forging at Level %s",
     "info.apothic_enchanting.anvil_xp_cost": "Raw XP Cost: %s",
 
+    "menu.apothic_enchanting.enchanting_info": "Available Enchantments",
     "info.apothic_enchanting.slider_power": "Power: %s",
     "info.apothic_enchanting.enchinfo_level": "Level: %s",
     "info.apothic_enchanting.enchinfo_rarity": "Rarity: %s",
@@ -256,7 +259,7 @@
     "info.apothic_enchanting.enchinfo_slot": "Enchantment Slot %s",
     "info.apothic_enchanting.enchinfo_minpow": "Min Power: %s",
     "info.apothic_enchanting.enchinfo_maxpow": "Max Power: %s",
-    "info.apothic_enchanting.enchinfo_title": "Available Enchantments",
+
     "info.apothic_enchanting.weights": "Weights",
     "info.apothic_enchanting.all_available": "View all available enchantments",
 
@@ -322,33 +325,35 @@
 
     "advancements.apothic_enchanting.level20": "Unlimited Power",
     "advancements.apothic_enchanting.level20.desc": "Obtain an item with an enchantment at level XX or higher",
-    
+
     "advancements.apothic_enchanting.enchanting_stats": "Eterna, Quanta, Arcana",
     "advancements.apothic_enchanting.enchanting_stats.desc": "Enchant an item while having at least 10 of each stat.",
-    
+
     "advancements.apothic_enchanting.quanta0": "Begone, Flux",
     "advancements.apothic_enchanting.quanta0.desc": "Enchant an item at 0% Quanta.",
-    
+
     "advancements.apothic_enchanting.quanta50": "Introduction to Chaos",
     "advancements.apothic_enchanting.quanta50.desc": "Enchant an item at 50% Quanta.",
-    
+
     "advancements.apothic_enchanting.quanta100": "Rolling the Dice",
     "advancements.apothic_enchanting.quanta100.desc": "Enchant an item at 100% Quanta.",
-    
+
     "advancements.apothic_enchanting.arcana50": "Magical Energy",
     "advancements.apothic_enchanting.arcana50.desc": "Enchant an item at 50% Arcana.",
-    
+
     "advancements.apothic_enchanting.arcana100": "Arcane Power",
     "advancements.apothic_enchanting.arcana100.desc": "Enchant an item at 100% Arcana.",
-    
+
     "advancements.apothic_enchanting.max_stats": "Maximum Strength",
     "advancements.apothic_enchanting.max_stats.desc": "Enchant an item while having all stats at maximum.",
-    
+
     "advancements.apothic_enchanting.max_stable": "Stable Power",
     "advancements.apothic_enchanting.max_stable.desc": "Enchant an item while having max Eterna and Arcana, but 0% Quanta.",
-    
+
     "advancements.apothic_enchanting.max_rectified": "Only the Best",
     "advancements.apothic_enchanting.max_rectified.desc": "Enchant an item with max stats and max rectification.",
+
+    "config.jade.plugin_apothic_enchanting.ench": "Apothic Enchanting",
 
     "rarity.enchantment.common": "Common",
     "rarity.enchantment.uncommon": "Uncommon",

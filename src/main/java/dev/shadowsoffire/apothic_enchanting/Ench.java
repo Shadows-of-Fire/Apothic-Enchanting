@@ -44,6 +44,7 @@ import dev.shadowsoffire.apothic_enchanting.table.ApothEnchantmentMenu;
 import dev.shadowsoffire.apothic_enchanting.table.EnchantingRecipe;
 import dev.shadowsoffire.apothic_enchanting.table.KeepNBTEnchantingRecipe;
 import dev.shadowsoffire.apothic_enchanting.util.MiscUtil;
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import dev.shadowsoffire.placebo.color.GradientColor;
 import dev.shadowsoffire.placebo.menu.MenuUtil;
 import dev.shadowsoffire.placebo.registry.DeferredHelper;
@@ -51,7 +52,6 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -301,7 +301,7 @@ public class Ench {
     public static class Tabs {
 
         public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ENCH = R.tab("ench",
-            () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.apotheosis.ench")).icon(() -> Items.HELLSHELF.get().getDefaultInstance()).build());
+            () -> CreativeModeTab.builder().title(TooltipUtil.lang("creative_tab", "all")).icon(() -> Items.HELLSHELF.get().getDefaultInstance()).build());
 
         private static void bootstrap() {}
 
@@ -367,8 +367,8 @@ public class Ench {
     }
 
     static {
-        R.recipeSerializer("enchanting", () -> EnchantingRecipe.SERIALIZER);
-        R.recipeSerializer("keep_nbt_enchanting", () -> KeepNBTEnchantingRecipe.SERIALIZER);
+        R.recipeSerializer("infusion", () -> EnchantingRecipe.SERIALIZER);
+        R.recipeSerializer("keep_nbt_infusion", () -> KeepNBTEnchantingRecipe.SERIALIZER);
         R.custom("warden_tendril", NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, () -> WardenLootModifier.CODEC);
     }
 

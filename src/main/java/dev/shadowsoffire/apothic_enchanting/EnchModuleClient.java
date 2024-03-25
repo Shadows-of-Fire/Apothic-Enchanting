@@ -10,12 +10,12 @@ import dev.shadowsoffire.apothic_enchanting.client.DrawsOnLeft;
 import dev.shadowsoffire.apothic_enchanting.library.EnchLibraryScreen;
 import dev.shadowsoffire.apothic_enchanting.table.ApothEnchantScreen;
 import dev.shadowsoffire.apothic_enchanting.table.EnchantingStatRegistry;
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import dev.shadowsoffire.placebo.util.EnchantmentUtils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
 import net.minecraft.client.particle.EnchantmentTableParticle;
-import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -77,8 +77,8 @@ public class EnchModuleClient {
         public void tooltips(ItemTooltipEvent e) {
             Item i = e.getItemStack().getItem();
             List<Component> tooltip = e.getToolTip();
-            if (i == Items.COBWEB) tooltip.add(Component.translatable("info.apotheosis.cobweb").withStyle(ChatFormatting.GRAY));
-            else if (i == dev.shadowsoffire.apothic_enchanting.Ench.Items.PRISMATIC_WEB.get()) tooltip.add(Component.translatable("info.apotheosis.prismatic_cobweb").withStyle(ChatFormatting.GRAY));
+            if (i == Items.COBWEB) tooltip.add(TooltipUtil.lang("info", "cobweb").withStyle(ChatFormatting.GRAY));
+            else if (i == dev.shadowsoffire.apothic_enchanting.Ench.Items.PRISMATIC_WEB.get()) tooltip.add(TooltipUtil.lang("info", "prismatic_cobweb").withStyle(ChatFormatting.GRAY));
             else if (i instanceof BlockItem) {
                 Block block = ((BlockItem) i).getBlock();
                 Level world = Minecraft.getInstance().level;
@@ -104,32 +104,32 @@ public class EnchModuleClient {
                 int clues = EnchantingStatRegistry.getBonusClues(state, world, BlockPos.ZERO);
                 boolean treasure = ((IEnchantingBlock) state.getBlock()).allowsTreasure(state, world, BlockPos.ZERO);
                 if (eterna != 0 || quanta != 0 || arcana != 0 || rectification != 0 || clues != 0) {
-                    tooltip.add(Component.translatable("info.apotheosis.ench_stats").withStyle(ChatFormatting.GOLD));
+                    tooltip.add(TooltipUtil.lang("info", "ench_stats").withStyle(ChatFormatting.GOLD));
                 }
                 if (eterna != 0) {
                     if (eterna > 0) {
-                        tooltip.add(Component.translatable("info.apotheosis.eterna.p", String.format("%.2f", eterna), String.format("%.2f", maxEterna)).withStyle(ChatFormatting.GREEN));
+                        tooltip.add(TooltipUtil.lang("info", "eterna.p", String.format("%.2f", eterna), String.format("%.2f", maxEterna)).withStyle(ChatFormatting.GREEN));
                     }
-                    else tooltip.add(Component.translatable("info.apotheosis.eterna", String.format("%.2f", eterna)).withStyle(ChatFormatting.GREEN));
+                    else tooltip.add(TooltipUtil.lang("info", "eterna", String.format("%.2f", eterna)).withStyle(ChatFormatting.GREEN));
                 }
                 if (quanta != 0) {
-                    tooltip.add(Component.translatable("info.apotheosis.quanta" + (quanta > 0 ? ".p" : ""), String.format("%.2f", quanta)).withStyle(ChatFormatting.RED));
+                    tooltip.add(TooltipUtil.lang("info", "quanta" + (quanta > 0 ? ".p" : ""), String.format("%.2f", quanta)).withStyle(ChatFormatting.RED));
                 }
                 if (arcana != 0) {
-                    tooltip.add(Component.translatable("info.apotheosis.arcana" + (arcana > 0 ? ".p" : ""), String.format("%.2f", arcana)).withStyle(ChatFormatting.DARK_PURPLE));
+                    tooltip.add(TooltipUtil.lang("info", "arcana" + (arcana > 0 ? ".p" : ""), String.format("%.2f", arcana)).withStyle(ChatFormatting.DARK_PURPLE));
                 }
                 if (rectification != 0) {
-                    tooltip.add(Component.translatable("info.apotheosis.rectification" + (rectification > 0 ? ".p" : ""), String.format("%.2f", rectification)).withStyle(ChatFormatting.YELLOW));
+                    tooltip.add(TooltipUtil.lang("info", "rectification" + (rectification > 0 ? ".p" : ""), String.format("%.2f", rectification)).withStyle(ChatFormatting.YELLOW));
                 }
                 if (clues != 0) {
-                    tooltip.add(Component.translatable("info.apotheosis.clues" + (clues > 0 ? ".p" : ""), String.format("%d", clues)).withStyle(ChatFormatting.DARK_AQUA));
+                    tooltip.add(TooltipUtil.lang("info", "clues" + (clues > 0 ? ".p" : ""), String.format("%d", clues)).withStyle(ChatFormatting.DARK_AQUA));
                 }
                 if (treasure) {
-                    tooltip.add(Component.translatable("info.apotheosis.allows_treasure").withStyle(ChatFormatting.GOLD));
+                    tooltip.add(TooltipUtil.lang("info", "allows_treasure").withStyle(ChatFormatting.GOLD));
                 }
                 Set<Enchantment> blacklist = ((IEnchantingBlock) state.getBlock()).getBlacklistedEnchantments(state, world, BlockPos.ZERO);
                 if (blacklist.size() > 0) {
-                    tooltip.add(Component.translatable("info.apotheosis.filter").withStyle(s -> s.withColor(0x58B0CC)));
+                    tooltip.add(TooltipUtil.lang("info", "filter").withStyle(s -> s.withColor(0x58B0CC)));
                     for (Enchantment ench : blacklist) {
                         MutableComponent name = (MutableComponent) ench.getFullname(1);
                         name.getSiblings().clear();
@@ -152,13 +152,13 @@ public class EnchModuleClient {
                     if (EnchConfig.showEnchantedBookMetadata) {
                         var info = ApothicEnchanting.getEnchInfo(ench);
                         Object[] args = new Object[4];
-                        args[0] = boolComp("info.apotheosis.discoverable", info.isDiscoverable());
-                        args[1] = boolComp("info.apotheosis.lootable", info.isLootable());
-                        args[2] = boolComp("info.apotheosis.tradeable", info.isTradeable());
-                        args[3] = boolComp("info.apotheosis.treasure", info.isTreasure());
+                        args[0] = boolComp("discoverable", info.isDiscoverable());
+                        args[1] = boolComp("lootable", info.isLootable());
+                        args[2] = boolComp("tradeable", info.isTradeable());
+                        args[3] = boolComp("treasure", info.isTreasure());
                         if (e.getFlags().isAdvanced()) {
                             tooltip.add(Component.translatable("%s \u2507 %s \u2507 %s \u2507 %s", args[0], args[1], args[2], args[3]).withStyle(ChatFormatting.DARK_GRAY));
-                            tooltip.add(Component.translatable("info.apotheosis.book_range", info.getMinPower(lvl), info.getMaxPower(lvl)).withStyle(ChatFormatting.GREEN));
+                            tooltip.add(TooltipUtil.lang("info", "book_range", info.getMinPower(lvl), info.getMaxPower(lvl)).withStyle(ChatFormatting.GREEN));
                         }
                         else {
                             tooltip.add(Component.translatable("%s \u2507 %s", args[2], args[3]).withStyle(ChatFormatting.DARK_GRAY));
@@ -174,16 +174,16 @@ public class EnchModuleClient {
                 int level = anv.getMenu().getCost();
                 if (level <= 0 || !anv.getMenu().getSlot(anv.getMenu().getResultSlot()).hasItem()) return;
                 List<Component> list = new ArrayList<>();
-                list.add(Component.literal(I18n.get("info.apotheosis.anvil_at", level)).withStyle(ChatFormatting.UNDERLINE, ChatFormatting.GREEN));
+                list.add(TooltipUtil.lang("info", "anvil_at", level).withStyle(ChatFormatting.UNDERLINE, ChatFormatting.GREEN));
                 int expCost = EnchantmentUtils.getTotalExperienceForLevel(level);
-                list.add(Component.translatable("info.apotheosis.anvil_xp_cost", Component.literal("" + expCost).withStyle(ChatFormatting.GREEN),
+                list.add(TooltipUtil.lang("info", "anvil_xp_cost", Component.literal("" + expCost).withStyle(ChatFormatting.GREEN),
                     Component.literal("" + level).withStyle(ChatFormatting.GREEN)));
                 DrawsOnLeft.draw(anv, e.getGuiGraphics(), list, anv.getGuiTop() + 28);
             }
         }
 
         private static Component boolComp(String key, boolean flag) {
-            return Component.translatable(key + (flag ? "" : ".not")).withStyle(Style.EMPTY.withColor(flag ? 0x108810 : 0xAA1616));
+            return TooltipUtil.lang("info", key + (flag ? "" : ".not")).withStyle(Style.EMPTY.withColor(flag ? 0x108810 : 0xAA1616));
         }
 
     }

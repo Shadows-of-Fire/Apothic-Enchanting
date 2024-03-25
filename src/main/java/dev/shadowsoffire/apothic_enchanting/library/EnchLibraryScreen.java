@@ -16,6 +16,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 import dev.shadowsoffire.apothic_attributes.ApothicAttributes;
 import dev.shadowsoffire.apothic_enchanting.ApothicEnchanting;
+import dev.shadowsoffire.placebo.network.PacketDistro;
 import dev.shadowsoffire.placebo.packets.ButtonClickMessage;
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import net.minecraft.ChatFormatting;
@@ -38,7 +39,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.neoforged.neoforge.network.PacketDistributor;
 
 public class EnchLibraryScreen extends AbstractContainerScreen<EnchLibraryContainer> {
     public static final ResourceLocation TEXTURES = ApothicEnchanting.loc("textures/gui/library.png");
@@ -172,7 +172,7 @@ public class EnchLibraryScreen extends AbstractContainerScreen<EnchLibraryContai
             int id = BuiltInRegistries.ENCHANTMENT.getId(libSlot.ench);
             if (Screen.hasShiftDown()) id |= 0x80000000;
             this.menu.onButtonClick(id);
-            PacketDistributor.SERVER.noArg().send(new ButtonClickMessage(id));
+            PacketDistro.sendToServer(new ButtonClickMessage(id));
             this.minecraft.getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0F));
         }
 

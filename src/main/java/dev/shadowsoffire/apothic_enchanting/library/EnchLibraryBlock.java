@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.mojang.serialization.MapCodec;
 
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import dev.shadowsoffire.placebo.menu.MenuUtil;
 import dev.shadowsoffire.placebo.menu.SimplerMenuProvider;
 import net.minecraft.ChatFormatting;
@@ -40,7 +41,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 public class EnchLibraryBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
-    public static final Component NAME = Component.translatable("apotheosis.ench.library");
+    public static final Component NAME = TooltipUtil.lang("menu", "library");
 
     protected final BlockEntitySupplier<? extends EnchLibraryTile> tileSupplier;
     protected final int maxLevel;

@@ -17,9 +17,9 @@
       "item": "minecraft:spyglass"
     },
 	"P": {
-	  "type": "forge:nbt",
+	  "type": "neoforge:nbt",
       "item": "minecraft:potion",
-	  "nbt": "{\"Potion\": \"minecraft:night_vision\"}"
+	  "tag": "{\"Potion\": \"minecraft:night_vision\"}"
     },
 	"E": {
       "item": "minecraft:ender_eye"

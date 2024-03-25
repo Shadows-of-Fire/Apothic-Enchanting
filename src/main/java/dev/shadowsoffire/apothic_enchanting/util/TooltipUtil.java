@@ -3,6 +3,7 @@ package dev.shadowsoffire.apothic_enchanting.util;
 import java.util.Set;
 import java.util.function.Consumer;
 
+import dev.shadowsoffire.apothic_enchanting.ApothicEnchanting;
 import dev.shadowsoffire.apothic_enchanting.api.IEnchantingBlock;
 import dev.shadowsoffire.apothic_enchanting.table.ApothEnchantmentMenu;
 import dev.shadowsoffire.apothic_enchanting.table.ApothEnchantmentMenu.TableStats;
@@ -27,32 +28,32 @@ public class TooltipUtil {
         int clues = EnchantingStatRegistry.getBonusClues(state, world, pos);
         boolean treasure = ((IEnchantingBlock) state.getBlock()).allowsTreasure(state, world, pos);
         if (eterna != 0 || quanta != 0 || arcana != 0 || rectification != 0 || clues != 0) {
-            tooltip.accept(Component.translatable("info.apotheosis.ench_stats").withStyle(ChatFormatting.GOLD));
+            tooltip.accept(TooltipUtil.lang("info", "ench_stats").withStyle(ChatFormatting.GOLD));
         }
         if (eterna != 0) {
             if (eterna > 0) {
-                tooltip.accept(Component.translatable("info.apotheosis.eterna.p", String.format("%.2f", eterna), String.format("%.2f", maxEterna)).withStyle(ChatFormatting.GREEN));
+                tooltip.accept(TooltipUtil.lang("info", "eterna.p", String.format("%.2f", eterna), String.format("%.2f", maxEterna)).withStyle(ChatFormatting.GREEN));
             }
-            else tooltip.accept(Component.translatable("info.apotheosis.eterna", String.format("%.2f", eterna)).withStyle(ChatFormatting.GREEN));
+            else tooltip.accept(TooltipUtil.lang("info", "eterna", String.format("%.2f", eterna)).withStyle(ChatFormatting.GREEN));
         }
         if (quanta != 0) {
-            tooltip.accept(Component.translatable("info.apotheosis.quanta" + (quanta > 0 ? ".p" : ""), String.format("%.2f", quanta)).withStyle(ChatFormatting.RED));
+            tooltip.accept(TooltipUtil.lang("info", "quanta" + (quanta > 0 ? ".p" : ""), String.format("%.2f", quanta)).withStyle(ChatFormatting.RED));
         }
         if (arcana != 0) {
-            tooltip.accept(Component.translatable("info.apotheosis.arcana" + (arcana > 0 ? ".p" : ""), String.format("%.2f", arcana)).withStyle(ChatFormatting.DARK_PURPLE));
+            tooltip.accept(TooltipUtil.lang("info", "arcana" + (arcana > 0 ? ".p" : ""), String.format("%.2f", arcana)).withStyle(ChatFormatting.DARK_PURPLE));
         }
         if (rectification != 0) {
-            tooltip.accept(Component.translatable("info.apotheosis.rectification" + (rectification > 0 ? ".p" : ""), String.format("%.2f", rectification)).withStyle(ChatFormatting.YELLOW));
+            tooltip.accept(TooltipUtil.lang("info", "rectification" + (rectification > 0 ? ".p" : ""), String.format("%.2f", rectification)).withStyle(ChatFormatting.YELLOW));
         }
         if (clues != 0) {
-            tooltip.accept(Component.translatable("info.apotheosis.clues" + (clues > 0 ? ".p" : ""), String.format("%d", clues)).withStyle(ChatFormatting.DARK_AQUA));
+            tooltip.accept(TooltipUtil.lang("info", "clues" + (clues > 0 ? ".p" : ""), String.format("%d", clues)).withStyle(ChatFormatting.DARK_AQUA));
         }
         if (treasure) {
-            tooltip.accept(Component.translatable("info.apotheosis.allows_treasure").withStyle(ChatFormatting.GOLD));
+            tooltip.accept(TooltipUtil.lang("info", "allows_treasure").withStyle(ChatFormatting.GOLD));
         }
         Set<Enchantment> blacklist = ((IEnchantingBlock) state.getBlock()).getBlacklistedEnchantments(state, world, pos);
         if (blacklist.size() > 0) {
-            tooltip.accept(Component.translatable("info.apotheosis.filter").withStyle(s -> s.withColor(0x58B0CC)));
+            tooltip.accept(TooltipUtil.lang("info", "filter").withStyle(s -> s.withColor(0x58B0CC)));
             for (Enchantment e : blacklist) {
                 MutableComponent name = (MutableComponent) e.getFullname(1);
                 name.getSiblings().clear();
@@ -64,10 +65,14 @@ public class TooltipUtil {
 
     public static void appendTableStats(Level world, BlockPos pos, Consumer<Component> tooltip) {
         TableStats stats = ApothEnchantmentMenu.gatherStats(world, pos, 0);
-        tooltip.accept(Component.translatable("info.apotheosis.eterna.t", String.format("%.2f", stats.eterna()), String.format("%.2f", EnchantingStatRegistry.getAbsoluteMaxEterna())).withStyle(ChatFormatting.GREEN));
-        tooltip.accept(Component.translatable("info.apotheosis.quanta.t", String.format("%.2f", Math.min(100, stats.quanta()))).withStyle(ChatFormatting.RED));
-        tooltip.accept(Component.translatable("info.apotheosis.arcana.t", String.format("%.2f", Math.min(100, stats.arcana()))).withStyle(ChatFormatting.DARK_PURPLE));
-        tooltip.accept(Component.translatable("info.apotheosis.rectification.t", String.format("%.2f", Mth.clamp(stats.rectification(), -100, 100))).withStyle(ChatFormatting.YELLOW));
-        tooltip.accept(Component.translatable("info.apotheosis.clues.t", String.format("%d", stats.clues())).withStyle(ChatFormatting.DARK_AQUA));
+        tooltip.accept(TooltipUtil.lang("info", "eterna.t", String.format("%.2f", stats.eterna()), String.format("%.2f", EnchantingStatRegistry.getAbsoluteMaxEterna())).withStyle(ChatFormatting.GREEN));
+        tooltip.accept(TooltipUtil.lang("info", "quanta.t", String.format("%.2f", Math.min(100, stats.quanta()))).withStyle(ChatFormatting.RED));
+        tooltip.accept(TooltipUtil.lang("info", "arcana.t", String.format("%.2f", Math.min(100, stats.arcana()))).withStyle(ChatFormatting.DARK_PURPLE));
+        tooltip.accept(TooltipUtil.lang("info", "rectification.t", String.format("%.2f", Mth.clamp(stats.rectification(), -100, 100))).withStyle(ChatFormatting.YELLOW));
+        tooltip.accept(TooltipUtil.lang("info", "clues.t", String.format("%d", stats.clues())).withStyle(ChatFormatting.DARK_AQUA));
+    }
+
+    public static MutableComponent lang(String type, String path, Object... args) {
+        return Component.translatable(type + "." + ApothicEnchanting.MODID + "." + path, args);
     }
 }

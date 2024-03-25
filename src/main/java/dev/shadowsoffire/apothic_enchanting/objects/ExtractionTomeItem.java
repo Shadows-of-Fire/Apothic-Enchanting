@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -41,8 +42,8 @@ public class ExtractionTomeItem extends BookItem {
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flagIn) {
         if (stack.isEnchanted()) return;
-        tooltip.add(Component.translatable("info.apotheosis.extraction_tome").withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("info.apotheosis.extraction_tome2").withStyle(ChatFormatting.GRAY));
+        tooltip.add(TooltipUtil.lang("info", "extraction_tome").withStyle(ChatFormatting.GRAY));
+        tooltip.add(TooltipUtil.lang("info", "extraction_tome2").withStyle(ChatFormatting.GRAY));
     }
 
     @Override

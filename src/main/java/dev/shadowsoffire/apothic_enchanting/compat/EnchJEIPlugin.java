@@ -1,6 +1,5 @@
 package dev.shadowsoffire.apothic_enchanting.compat;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.ImmutableList;
@@ -9,6 +8,7 @@ import com.google.common.collect.ImmutableMap;
 import dev.shadowsoffire.apothic_enchanting.ApothicEnchanting;
 import dev.shadowsoffire.apothic_enchanting.Ench;
 import dev.shadowsoffire.apothic_enchanting.table.EnchantingRecipe;
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.RecipeTypes;
@@ -18,7 +18,6 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -63,10 +62,13 @@ public class EnchJEIPlugin implements IModPlugin {
                 ImmutableList.of(new ItemStack(Blocks.IRON_BLOCK)),
                 ImmutableList.of(new ItemStack(Blocks.ANVIL)))));
 
-        reg.addIngredientInfo(new ItemStack(Blocks.ENCHANTING_TABLE), VanillaTypes.ITEM_STACK, Component.translatable("info.apotheosis.enchanting"));
-        reg.addIngredientInfo(new ItemStack(Ench.Blocks.LIBRARY.get()), VanillaTypes.ITEM_STACK, Component.translatable("info.apotheosis.library"));
-        List<EnchantingRecipe> recipes = new ArrayList<>(Minecraft.getInstance().level.getRecipeManager().getAllRecipesFor(Ench.RecipeTypes.INFUSION.get())).stream().map(RecipeHolder::value).toList();
-        recipes.sort((r1, r2) -> Float.compare(r1.getRequirements().eterna(), r2.getRequirements().eterna()));
+        reg.addIngredientInfo(new ItemStack(Blocks.ENCHANTING_TABLE), VanillaTypes.ITEM_STACK, TooltipUtil.lang("info", "enchanting"));
+        reg.addIngredientInfo(new ItemStack(Ench.Blocks.LIBRARY.get()), VanillaTypes.ITEM_STACK, TooltipUtil.lang("info", "library"));
+        List<EnchantingRecipe> recipes = Minecraft.getInstance().level.getRecipeManager().getAllRecipesFor(Ench.RecipeTypes.INFUSION.get())
+            .stream()
+            .map(RecipeHolder::value)
+            .sorted((r1, r2) -> Float.compare(r1.getRequirements().eterna(), r2.getRequirements().eterna()))
+            .toList();
         reg.addRecipes(EnchantingCategory.TYPE, recipes);
     }
 

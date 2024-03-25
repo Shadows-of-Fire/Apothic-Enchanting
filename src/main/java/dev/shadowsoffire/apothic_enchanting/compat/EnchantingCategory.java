@@ -13,6 +13,7 @@ import dev.shadowsoffire.apothic_enchanting.Ench;
 import dev.shadowsoffire.apothic_enchanting.table.EnchantingRecipe;
 import dev.shadowsoffire.apothic_enchanting.table.EnchantingStatRegistry;
 import dev.shadowsoffire.apothic_enchanting.table.EnchantingStatRegistry.Stats;
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
@@ -29,7 +30,6 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.EnchantmentNames;
-import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.resources.ResourceLocation;
@@ -51,7 +51,7 @@ public class EnchantingCategory implements IRecipeCategory<EnchantingRecipe> {
     public EnchantingCategory(IGuiHelper guiHelper) {
         this.background = guiHelper.createDrawable(TEXTURES, 0, 0, 170, 56);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Blocks.ENCHANTING_TABLE));
-        this.localizedName = Component.translatable("apotheosis.recipes.enchanting");
+        this.localizedName = TooltipUtil.lang("recipes", "infusion");
     }
 
     @Override
@@ -97,9 +97,9 @@ public class EnchantingCategory implements IRecipeCategory<EnchantingRecipe> {
         Font font = Minecraft.getInstance().font;
         Stats stats = recipe.getRequirements();
         Stats maxStats = recipe.getMaxRequirements();
-        gfx.drawString(font, I18n.get("gui.apotheosis.enchant.eterna"), 16, 26, 0x3DB53D, false);
-        gfx.drawString(font, I18n.get("gui.apotheosis.enchant.quanta"), 16, 36, 0xFC5454, false);
-        gfx.drawString(font, I18n.get("gui.apotheosis.enchant.arcana"), 16, 46, 0xA800A8, false);
+        gfx.drawString(font, TooltipUtil.lang("gui", "enchant.eterna"), 16, 26, 0x3DB53D, false);
+        gfx.drawString(font, TooltipUtil.lang("gui", "enchant.quanta"), 16, 36, 0xFC5454, false);
+        gfx.drawString(font, TooltipUtil.lang("gui", "enchant.arcana"), 16, 46, 0xA800A8, false);
         int level = (int) (stats.eterna() * 2);
 
         String s = "" + level;
@@ -141,37 +141,37 @@ public class EnchantingCategory implements IRecipeCategory<EnchantingRecipe> {
         }
         else if (mouseX > 56 && mouseX <= 56 + 110 && mouseY > 26 && mouseY <= 27 + 5) {
             List<Component> list = new ArrayList<>();
-            list.add(Component.translatable("gui.apotheosis.enchant.eterna").withStyle(ChatFormatting.GREEN));
+            list.add(TooltipUtil.lang("gui", "enchant.eterna").withStyle(ChatFormatting.GREEN));
             if (maxStats.eterna() == stats.eterna()) {
-                list.add(Component.translatable("info.apotheosis.eterna_exact", stats.eterna(), EnchantingStatRegistry.getAbsoluteMaxEterna()).withStyle(ChatFormatting.GRAY));
+                list.add(TooltipUtil.lang("info", "eterna_exact", stats.eterna(), EnchantingStatRegistry.getAbsoluteMaxEterna()).withStyle(ChatFormatting.GRAY));
             }
             else {
-                list.add(Component.translatable("info.apotheosis.eterna_at_least", stats.eterna(), EnchantingStatRegistry.getAbsoluteMaxEterna()).withStyle(ChatFormatting.GRAY));
-                if (maxStats.eterna() > -1) list.add(Component.translatable("info.apotheosis.eterna_at_most", maxStats.eterna(), EnchantingStatRegistry.getAbsoluteMaxEterna()).withStyle(ChatFormatting.GRAY));
+                list.add(TooltipUtil.lang("info", "eterna_at_least", stats.eterna(), EnchantingStatRegistry.getAbsoluteMaxEterna()).withStyle(ChatFormatting.GRAY));
+                if (maxStats.eterna() > -1) list.add(TooltipUtil.lang("info", "eterna_at_most", maxStats.eterna(), EnchantingStatRegistry.getAbsoluteMaxEterna()).withStyle(ChatFormatting.GRAY));
             }
             gfx.renderComponentTooltip(font, list, (int) mouseX, (int) mouseY);
         }
         else if (mouseX > 56 && mouseX <= 56 + 110 && mouseY > 36 && mouseY <= 37 + 5) {
             List<Component> list = new ArrayList<>();
-            list.add(Component.translatable("gui.apotheosis.enchant.quanta").withStyle(ChatFormatting.RED));
+            list.add(TooltipUtil.lang("gui", "enchant.quanta").withStyle(ChatFormatting.RED));
             if (maxStats.quanta() == stats.quanta()) {
-                list.add(Component.translatable("info.apotheosis.percent_exact", stats.quanta()).withStyle(ChatFormatting.GRAY));
+                list.add(TooltipUtil.lang("info", "percent_exact", stats.quanta()).withStyle(ChatFormatting.GRAY));
             }
             else {
-                list.add(Component.translatable("info.apotheosis.percent_at_least", stats.quanta()).withStyle(ChatFormatting.GRAY));
-                if (maxStats.quanta() > -1) list.add(Component.translatable("info.apotheosis.percent_at_most", maxStats.quanta()).withStyle(ChatFormatting.GRAY));
+                list.add(TooltipUtil.lang("info", "percent_at_least", stats.quanta()).withStyle(ChatFormatting.GRAY));
+                if (maxStats.quanta() > -1) list.add(TooltipUtil.lang("info", "percent_at_most", maxStats.quanta()).withStyle(ChatFormatting.GRAY));
             }
             gfx.renderComponentTooltip(font, list, (int) mouseX, (int) mouseY);
         }
         else if (mouseX > 56 && mouseX <= 56 + 110 && mouseY > 46 && mouseY <= 47 + 5) {
             List<Component> list = new ArrayList<>();
-            list.add(Component.translatable("gui.apotheosis.enchant.arcana").withStyle(ChatFormatting.DARK_PURPLE));
+            list.add(TooltipUtil.lang("gui", "enchant.arcana").withStyle(ChatFormatting.DARK_PURPLE));
             if (maxStats.arcana() == stats.arcana()) {
-                list.add(Component.translatable("info.apotheosis.percent_exact", stats.arcana()).withStyle(ChatFormatting.GRAY));
+                list.add(TooltipUtil.lang("info", "percent_exact", stats.arcana()).withStyle(ChatFormatting.GRAY));
             }
             else {
-                list.add(Component.translatable("info.apotheosis.percent_at_least", stats.arcana()).withStyle(ChatFormatting.GRAY));
-                if (maxStats.arcana() > -1) list.add(Component.translatable("info.apotheosis.percent_at_most", maxStats.arcana()).withStyle(ChatFormatting.GRAY));
+                list.add(TooltipUtil.lang("info", "percent_at_least", stats.arcana()).withStyle(ChatFormatting.GRAY));
+                if (maxStats.arcana() > -1) list.add(TooltipUtil.lang("info", "percent_at_most", maxStats.arcana()).withStyle(ChatFormatting.GRAY));
             }
             gfx.renderComponentTooltip(font, list, (int) mouseX, (int) mouseY);
         }

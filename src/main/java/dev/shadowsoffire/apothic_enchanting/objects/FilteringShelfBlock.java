@@ -10,6 +10,7 @@ import java.util.Set;
 
 import dev.shadowsoffire.apothic_enchanting.Ench;
 import dev.shadowsoffire.apothic_enchanting.api.IEnchantingBlock;
+import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import dev.shadowsoffire.placebo.network.VanillaPacketDispatcher;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -129,7 +130,7 @@ public class FilteringShelfBlock extends ChiseledBookShelfBlock implements IEnch
 
     @Override
     public void appendHoverText(ItemStack stack, BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable("info.apotheosis.filtering_shelf").withStyle(ChatFormatting.DARK_GRAY));
+        tooltip.add(TooltipUtil.lang("info", "filtering_shelf").withStyle(ChatFormatting.DARK_GRAY));
     }
 
     public static boolean canInsert(ItemStack stack) {
