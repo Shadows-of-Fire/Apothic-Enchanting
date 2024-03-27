@@ -7,7 +7,12 @@ import dev.shadowsoffire.apothic_enchanting.table.EnchantingStatRegistry;
 import dev.shadowsoffire.placebo.config.Configuration;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction;
 
+/**
+ * EnchantmentInfo retains all configurable data about an {@link Enchantment}.
+ */
 public class EnchantmentInfo {
 
     protected final Enchantment ench;
@@ -32,34 +37,74 @@ public class EnchantmentInfo {
         this(ench, ench.getMaxLevel(), ench.getMaxLevel(), defaultMax(ench), defaultMin(ench), ench.isTreasureOnly(), ench.isDiscoverable(), ench.isDiscoverable(), ench.isTradeable());
     }
 
+    /**
+     * Returns the max level of the enchantment, as set by the config or enforced by IMC.
+     */
     public int getMaxLevel() {
         return Math.min(ApothicEnchanting.ENCH_HARD_CAPS.getOrDefault(this.ench, 127), this.maxLevel);
     }
 
+    /**
+     * Returns the max loot level of the enchantment, as set by the config or enforced by IMC.
+     * <p>
+     * The loot level is used in loot table generation as well as villager trades.
+     * 
+     * @see #defaultMax(Enchantment)
+     */
     public int getMaxLootLevel() {
         return Math.min(ApothicEnchanting.ENCH_HARD_CAPS.getOrDefault(this.ench, 127), this.maxLootLevel);
     }
 
+    /**
+     * Returns the minimum enchanting power required to receive the given level of this enchantment in an enchanting table.
+     * 
+     * @see #defaultMin(Enchantment)
+     */
     public int getMinPower(int level) {
         return this.minPower.getPower(level);
     }
 
+    /**
+     * Returns the maximum enchanting power required to receive the given level of this enchantment in an enchanting table.
+     * <p>
+     * By default, this is overridden to return 200 for all enchantments.
+     */
     public int getMaxPower(int level) {
         return this.maxPower.getPower(level);
     }
 
+    /**
+     * If an enchantment is discoverable, it is available via enchanting table or other systems that use {@link EnchantmentHelper#getAvailableEnchantmentResults}
+     * 
+     * @return If this enchantment is discoverable
+     */
     public boolean isDiscoverable() {
         return this.discoverable;
     }
 
+    /**
+     * Treasure enchantments are not allowed by default in the enchanting table, unless using a bookshelf that enables it.
+     * 
+     * @return If this enchantment is a treasure enchantment.
+     */
     public boolean isTreasure() {
         return this.treasure;
     }
 
+    /**
+     * If an enchantment is lootable, it is available via loot sources, such as {@link EnchantRandomlyFunction}.
+     * 
+     * @return If this enchantment is lootable
+     */
     public boolean isLootable() {
         return this.lootable;
     }
 
+    /**
+     * If an enchantment is tradeable, it can be sold by villagers via {@link EnchantBookForEmeralds}.
+     * 
+     * @return If this enchantment is tradeable
+     */
     public boolean isTradeable() {
         return this.tradeable;
     }
