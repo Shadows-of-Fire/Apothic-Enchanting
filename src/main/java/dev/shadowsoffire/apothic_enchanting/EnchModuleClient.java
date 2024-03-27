@@ -78,7 +78,7 @@ public class EnchModuleClient {
             Item i = e.getItemStack().getItem();
             List<Component> tooltip = e.getToolTip();
             if (i == Items.COBWEB) tooltip.add(TooltipUtil.lang("info", "cobweb").withStyle(ChatFormatting.GRAY));
-            else if (i == dev.shadowsoffire.apothic_enchanting.Ench.Items.PRISMATIC_WEB.get()) tooltip.add(TooltipUtil.lang("info", "prismatic_cobweb").withStyle(ChatFormatting.GRAY));
+            else if (i == Ench.Items.PRISMATIC_WEB.get()) tooltip.add(TooltipUtil.lang("info", "prismatic_cobweb").withStyle(ChatFormatting.GRAY));
             else if (i instanceof BlockItem) {
                 Block block = ((BlockItem) i).getBlock();
                 Level world = Minecraft.getInstance().level;
@@ -159,9 +159,6 @@ public class EnchModuleClient {
                         if (e.getFlags().isAdvanced()) {
                             tooltip.add(Component.translatable("%s \u2507 %s \u2507 %s \u2507 %s", args[0], args[1], args[2], args[3]).withStyle(ChatFormatting.DARK_GRAY));
                             tooltip.add(TooltipUtil.lang("info", "book_range", info.getMinPower(lvl), info.getMaxPower(lvl)).withStyle(ChatFormatting.GREEN));
-                        }
-                        else {
-                            tooltip.add(Component.translatable("%s \u2507 %s", args[2], args[3]).withStyle(ChatFormatting.DARK_GRAY));
                         }
                     }
                 }

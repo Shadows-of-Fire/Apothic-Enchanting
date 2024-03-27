@@ -33,7 +33,7 @@ public interface IEnchantingBlock extends IBlockExtension {
      */
     @ApiStatus.OverrideOnly
     default float getMaxEnchantingPower(BlockState state, LevelReader world, BlockPos pos) {
-        return 15F;
+        return 30;
     }
 
     /**

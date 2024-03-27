@@ -186,7 +186,6 @@ public class ApothEnchantScreen extends EnchantmentScreen implements DrawsOnLeft
     @Override
     public void render(GuiGraphics gfx, int mouseX, int mouseY, float partialTicks) {
         partialTicks = this.minecraft.getFrameTime();
-        this.renderBackground(gfx, mouseY, mouseY, partialTicks);
         ((SuperRender) this).apoth_superRender(gfx, mouseX, mouseY, partialTicks);
         this.renderTooltip(gfx, mouseX, mouseY);
         boolean creative = this.minecraft.player.getAbilities().instabuild;
@@ -337,8 +336,8 @@ public class ApothEnchantScreen extends EnchantmentScreen implements DrawsOnLeft
                         Component.literal("" + EnchantmentUtils.getLevelForExperience(expCost)).withStyle(ChatFormatting.GREEN)));
                     float quanta = this.menu.stats.quanta() / 100F;
                     float rectification = this.menu.stats.rectification() / 100F;
-                    int minPow = Math.round(Mth.clamp(level - level * (quanta - quanta * rectification), 1, EnchantingStatRegistry.getAbsoluteMaxEterna() * 4));
-                    int maxPow = Math.round(Mth.clamp(level + level * quanta, 1, EnchantingStatRegistry.getAbsoluteMaxEterna() * 4));
+                    int minPow = Math.round(Mth.clamp(level - level * (quanta - quanta * rectification), 1, EnchantingStatRegistry.getAbsoluteMaxPower()));
+                    int maxPow = Math.round(Mth.clamp(level + level * quanta, 1, EnchantingStatRegistry.getAbsoluteMaxPower()));
                     list.add(TooltipUtil.lang("info", "power_range", Component.literal("" + minPow).withStyle(ChatFormatting.DARK_RED), Component.literal("" + maxPow).withStyle(ChatFormatting.BLUE)));
                     list.add(TooltipUtil.lang("info", "item_ench", Component.literal("" + enchanting.getEnchantmentValue()).withStyle(ChatFormatting.GREEN)));
                     list.add(TooltipUtil.lang("info", "num_clues", Component.literal("" + (1 + this.menu.stats.clues())).withStyle(ChatFormatting.DARK_AQUA)));

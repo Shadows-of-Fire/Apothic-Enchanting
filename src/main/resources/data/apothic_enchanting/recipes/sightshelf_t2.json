@@ -14,9 +14,9 @@
       "tag": "forge:ingots/netherite"
     },
 	"P": {
-	  "type": "forge:nbt",
+	  "type": "neoforge:nbt",
       "item": "minecraft:potion",
-	  "nbt": "{\"Potion\": \"minecraft:long_night_vision\"}"
+	  "tag": "{\"Potion\": \"minecraft:long_night_vision\"}"
     },
 	"E": {
       "item": "apothic_enchanting:sightshelf"

@@ -1,8 +1,8 @@
 {
 	"block": "apothic_enchanting:dormant_deepshelf",
 	"stats": {
-		"maxEterna": 15,
-		"eterna": 1,
+		"maxEterna": 30,
+		"eterna": 2,
 		"quanta": 0,
 		"arcana": 0
 	}

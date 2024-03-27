@@ -1,8 +1,8 @@
 {
 	"block": "apothic_enchanting:glowing_hellshelf",
 	"stats": {
-		"maxEterna": 30,
-		"eterna": 2,
+		"maxEterna": 60,
+		"eterna": 4,
 		"quanta": 2,
 		"arcana": 4
 	}

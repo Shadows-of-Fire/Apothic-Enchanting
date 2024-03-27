@@ -35,7 +35,7 @@ public class EnchantingStatRegistry extends DynamicRegistry<BlockStats> {
     public static final EnchantingStatRegistry INSTANCE = new EnchantingStatRegistry();
     private final Map<Block, Stats> statsPerBlock = new HashMap<>();
 
-    private float absoluteMaxEterna = 50;
+    private float absoluteMaxEterna = 100;
 
     protected EnchantingStatRegistry() {
         super(ApothicEnchanting.LOGGER, "enchanting_stats", true, false);
@@ -64,12 +64,12 @@ public class EnchantingStatRegistry extends DynamicRegistry<BlockStats> {
     /**
      * Retrieves the Eterna value for a specific block.
      * This can be provided by a stat file, or {@link BlockState#getEnchantPowerBonus}
-     * 1F of Eterna = 2 Levels in the enchanting table.
+     * 1 Eterna = +1 level in the enchanting table.
      */
     public static float getEterna(BlockState state, Level world, BlockPos pos) {
         Block block = state.getBlock();
         if (INSTANCE.statsPerBlock.containsKey(block)) return INSTANCE.statsPerBlock.get(block).eterna;
-        return state.getEnchantPowerBonus(world, pos);
+        return state.getEnchantPowerBonus(world, pos) * 2;
     }
 
     /**
@@ -81,6 +81,7 @@ public class EnchantingStatRegistry extends DynamicRegistry<BlockStats> {
         Block block = state.getBlock();
         if (INSTANCE.statsPerBlock.containsKey(block)) return INSTANCE.statsPerBlock.get(block).maxEterna;
         return ((IEnchantingBlock) block).getMaxEnchantingPower(state, world, pos);
+
     }
 
     /**
@@ -126,10 +127,17 @@ public class EnchantingStatRegistry extends DynamicRegistry<BlockStats> {
     }
 
     /**
-     * This returns the highest possible eterna value, based on the definitions for all stat providers.
+     * Returns the highest possible eterna value, based on the definitions for all stat providers.
      */
     public static float getAbsoluteMaxEterna() {
         return INSTANCE.absoluteMaxEterna;
+    }
+
+    /**
+     * Returns the highest possible power (effective level) value, based on the absolute max eterna.
+     */
+    public static int getAbsoluteMaxPower() {
+        return (int) (getAbsoluteMaxEterna() * 2);
     }
 
     private void computeAbsoluteMaxEterna() {

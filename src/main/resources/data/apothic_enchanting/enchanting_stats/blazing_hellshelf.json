@@ -1,8 +1,8 @@
 {
 	"block": "apothic_enchanting:blazing_hellshelf",
 	"stats": {
-		"maxEterna": 30,
-		"eterna": 4,
+		"maxEterna": 60,
+		"eterna": 8,
 		"quanta": 5,
 		"arcana": 0,
 		"clues": -1

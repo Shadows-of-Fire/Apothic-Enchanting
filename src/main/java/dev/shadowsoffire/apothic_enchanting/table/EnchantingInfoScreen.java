@@ -72,8 +72,8 @@ public class EnchantingInfoScreen extends Screen {
                 int level = this.costs[i];
                 float quanta = parent.getMenu().stats.quanta() / 100F;
                 float rectification = parent.getMenu().stats.rectification() / 100F;
-                int minPow = Math.round(Mth.clamp(level - level * (quanta - quanta * rectification), 1, EnchantingStatRegistry.getAbsoluteMaxEterna() * 4));
-                int maxPow = Math.round(Mth.clamp(level + level * quanta, 1, EnchantingStatRegistry.getAbsoluteMaxEterna() * 4));
+                int minPow = Math.round(Mth.clamp(level - level * (quanta - quanta * rectification), 1, EnchantingStatRegistry.getAbsoluteMaxPower()));
+                int maxPow = Math.round(Mth.clamp(level + level * quanta, 1, EnchantingStatRegistry.getAbsoluteMaxPower()));
                 this.powers[i] = new int[] { minPow, maxPow };
                 this.selectedSlot = i;
             }

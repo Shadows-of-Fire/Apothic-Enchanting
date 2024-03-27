@@ -65,7 +65,7 @@ public class RealEnchantmentHelper {
         if (enchantability > 0) {
             float quantaFactor = 1 + getQuantaFactor(rand, quanta, rectification);
             // if (!FMLEnvironment.production) EnchModule.LOGGER.debug("Quanta: {} | Rect: {} | Quanta Roll: {}", quanta, rectification, quantaFactor);
-            level = Mth.clamp(Math.round(level * quantaFactor), 1, (int) (EnchantingStatRegistry.getAbsoluteMaxEterna() * 4));
+            level = Mth.clamp(Math.round(level * quantaFactor), 1, EnchantingStatRegistry.getAbsoluteMaxPower());
             Arcana arcanaVals = Arcana.getForThreshold(arcana);
             List<EnchantmentInstance> allEnchants = getAvailableEnchantmentResults(level, stack, treasure, blacklist);
             Map<Enchantment, Integer> enchants = EnchantmentHelper.getEnchantments(stack);

@@ -1,8 +1,8 @@
 {
 	"block": "apothic_enchanting:infused_hellshelf",
 	"stats": {
-		"maxEterna": 27,
-		"eterna": 1.75,
+		"maxEterna": 55,
+		"eterna": 3.5,
 		"quanta": 1.75,
 		"arcana": 0
 	}

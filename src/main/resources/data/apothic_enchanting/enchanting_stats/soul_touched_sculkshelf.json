@@ -1,8 +1,8 @@
 {
 	"block": "apothic_enchanting:soul_touched_sculkshelf",
 	"stats": {
-		"maxEterna": 40,
-		"eterna": 5,
+		"maxEterna": 80,
+		"eterna": 10,
 		"quanta": 15,
 		"arcana": 5,
 		"rectification": 5

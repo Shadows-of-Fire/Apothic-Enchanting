@@ -3,7 +3,6 @@ package dev.shadowsoffire.apothic_enchanting.objects;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import net.minecraft.ChatFormatting;
@@ -26,8 +25,6 @@ import net.neoforged.neoforge.event.AnvilUpdateEvent;
 import net.neoforged.neoforge.event.entity.player.AnvilRepairEvent;
 
 public class ExtractionTomeItem extends BookItem {
-
-    static Random rand = new Random();
 
     public ExtractionTomeItem() {
         super(new Item.Properties());

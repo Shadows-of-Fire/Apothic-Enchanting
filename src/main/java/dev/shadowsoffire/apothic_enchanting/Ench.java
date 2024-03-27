@@ -228,9 +228,9 @@ public class Ench {
 
         public static final Supplier<BlockItem> SEASHELF = R.item("seashelf", () -> new BlockItem(Ench.Blocks.SEASHELF.get(), new Item.Properties()));
 
-        public static final Supplier<BlockItem> SIGHTSHELF = R.item("sightshelf", () -> new BlockItem(Ench.Blocks.SIGHTSHELF.get(), new Item.Properties()));
+        public static final Supplier<BlockItem> SIGHTSHELF = R.item("sightshelf", () -> new BlockItem(Ench.Blocks.SIGHTSHELF.get(), new Item.Properties().rarity(Rarity.UNCOMMON)));
 
-        public static final Supplier<BlockItem> SIGHTSHELF_T2 = R.item("sightshelf_t2", () -> new BlockItem(Ench.Blocks.SIGHTSHELF_T2.get(), new Item.Properties()));
+        public static final Supplier<BlockItem> SIGHTSHELF_T2 = R.item("sightshelf_t2", () -> new BlockItem(Ench.Blocks.SIGHTSHELF_T2.get(), new Item.Properties().rarity(Rarity.UNCOMMON)));
 
         public static final Supplier<BlockItem> SOUL_TOUCHED_DEEPSHELF = R.item("soul_touched_deepshelf", () -> new BlockItem(Ench.Blocks.SOUL_TOUCHED_DEEPSHELF.get(), new Item.Properties()));
 

@@ -2,7 +2,7 @@
 	"block": "apothic_enchanting:stoneshelf",
 	"stats": {
 		"maxEterna": 0,
-		"eterna": -1.5,
+		"eterna": -3,
 		"quanta": 0,
 		"arcana": -7.5
 	}

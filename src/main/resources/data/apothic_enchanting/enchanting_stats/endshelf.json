@@ -1,8 +1,8 @@
 {
 	"block": "apothic_enchanting:endshelf",
 	"stats": {
-		"maxEterna": 45,
-		"eterna": 2.5,
+		"maxEterna": 90,
+		"eterna": 5,
 		"quanta": 5,
 		"arcana": 5
 	}

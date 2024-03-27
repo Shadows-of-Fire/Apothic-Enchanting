@@ -1,8 +1,8 @@
 {
 	"block": "apothic_enchanting:echoing_sculkshelf",
 	"stats": {
-		"maxEterna": 40,
-		"eterna": 5,
+		"maxEterna": 80,
+		"eterna": 10,
 		"quanta": 5,
 		"arcana": 15,
 		"clues": 1

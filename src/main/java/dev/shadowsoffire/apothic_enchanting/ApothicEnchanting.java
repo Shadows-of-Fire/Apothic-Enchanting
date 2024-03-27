@@ -231,7 +231,7 @@ public class ApothicEnchanting {
         int level = ench.getMaxLevel();
         if (level == 1) return 1;
         PowerFunc minFunc = EnchantmentInfo.defaultMin(ench);
-        int max = (int) (EnchantingStatRegistry.getAbsoluteMaxEterna() * 4);
+        int max = (int) (EnchantingStatRegistry.getAbsoluteMaxPower());
         int minPower = minFunc.getPower(level);
         if (minPower >= max) return level;
         int lastPower = minPower;

@@ -130,7 +130,7 @@ public class FilteringShelfBlock extends ChiseledBookShelfBlock implements IEnch
 
     @Override
     public void appendHoverText(ItemStack stack, BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(TooltipUtil.lang("info", "filtering_shelf").withStyle(ChatFormatting.DARK_GRAY));
+        tooltip.add(TooltipUtil.lang("info", "filtering_shelf").withStyle(ChatFormatting.GRAY));
     }
 
     public static boolean canInsert(ItemStack stack) {
