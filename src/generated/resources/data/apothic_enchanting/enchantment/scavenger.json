@@ -1,36 +1,36 @@
 {
-  "anvil_cost": 10,
-  "description": {
-    "color": "dark_green",
-    "translate": "enchantment.apothic_enchanting.scavenger"
-  },
-  "effects": {
-    "apothic_enchanting:extra_loot_roll": [
-      {
-        "effect": {
-          "type": "minecraft:add",
-          "value": {
-            "type": "minecraft:linear",
-            "base": 0.025,
-            "per_level_above_first": 0.025
-          }
-        }
-      }
-    ]
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 3,
-  "min_cost": {
-    "base": 55,
-    "per_level_above_first": 50
-  },
-  "primary_items": "#minecraft:enchantable/sword",
-  "slots": [
-    "mainhand"
-  ],
-  "supported_items": "#minecraft:enchantable/sharp_weapon",
-  "weight": 1
+    "anvil_cost": 10,
+    "description": {
+        "color": "dark_green",
+        "translate": "enchantment.apothic_enchanting.scavenger"
+    },
+    "effects": {
+        "apothic_enchanting:extra_loot_roll": [
+            {
+                "effect": {
+                    "type": "minecraft:add",
+                    "value": {
+                        "type": "minecraft:linear",
+                        "base": 0.025,
+                        "per_level_above_first": 0.025
+                    }
+                }
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 3,
+    "min_cost": {
+        "base": 55,
+        "per_level_above_first": 50
+    },
+    "primary_items": "#minecraft:enchantable/sword",
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": "#minecraft:enchantable/sharp_weapon",
+    "weight": 1
 }

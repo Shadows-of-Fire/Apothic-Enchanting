@@ -1,37 +1,37 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "E": {
-      "item": "minecraft:ender_eye"
-    },
-    "I": {
-      "item": "apothic_enchanting:infused_hellshelf"
-    },
-    "P": {
-      "type": "neoforge:components",
-      "components": {
-        "minecraft:potion_contents": {
-          "potion": "minecraft:night_vision"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "E": {
+            "item": "minecraft:ender_eye"
+        },
+        "I": {
+            "item": "apothic_enchanting:infused_hellshelf"
+        },
+        "P": {
+            "type": "neoforge:components",
+            "components": {
+                "minecraft:potion_contents": {
+                    "potion": "minecraft:night_vision"
+                }
+            },
+            "items": "minecraft:potion"
+        },
+        "S": {
+            "tag": "c:storage_blocks/gold"
+        },
+        "Y": {
+            "item": "minecraft:spyglass"
         }
-      },
-      "items": "minecraft:potion"
     },
-    "S": {
-      "tag": "c:storage_blocks/gold"
-    },
-    "Y": {
-      "item": "minecraft:spyglass"
+    "pattern": [
+        "SIS",
+        "PEY",
+        "SIS"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:sightshelf"
     }
-  },
-  "pattern": [
-    "SIS",
-    "PEY",
-    "SIS"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:sightshelf"
-  }
 }

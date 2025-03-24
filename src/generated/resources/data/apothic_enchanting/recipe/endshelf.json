@@ -1,28 +1,28 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "B": {
-      "tag": "c:bookshelves"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "B": {
+            "tag": "c:bookshelves"
+        },
+        "E": {
+            "item": "minecraft:end_stone_bricks"
+        },
+        "I": {
+            "item": "apothic_enchanting:infused_breath"
+        },
+        "N": {
+            "tag": "c:ender_pearls"
+        }
     },
-    "E": {
-      "item": "minecraft:end_stone_bricks"
-    },
-    "I": {
-      "item": "apothic_enchanting:infused_breath"
-    },
-    "N": {
-      "tag": "c:ender_pearls"
+    "pattern": [
+        "EEE",
+        "IBN",
+        "EEE"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:endshelf"
     }
-  },
-  "pattern": [
-    "EEE",
-    "IBN",
-    "EEE"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:endshelf"
-  }
 }

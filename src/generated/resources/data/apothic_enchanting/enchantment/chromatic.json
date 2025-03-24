@@ -1,23 +1,23 @@
 {
-  "anvil_cost": 2,
-  "description": {
-    "translate": "enchantment.apothic_enchanting.chromatic"
-  },
-  "effects": {
-    "apothic_enchanting:chromatic": {}
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 1,
-  "min_cost": {
-    "base": 25,
-    "per_level_above_first": 0
-  },
-  "slots": [
-    "hand"
-  ],
-  "supported_items": "#c:tools/shear",
-  "weight": 5
+    "anvil_cost": 2,
+    "description": {
+        "translate": "enchantment.apothic_enchanting.chromatic"
+    },
+    "effects": {
+        "apothic_enchanting:chromatic": {}
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 25,
+        "per_level_above_first": 0
+    },
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#c:tools/shear",
+    "weight": 5
 }

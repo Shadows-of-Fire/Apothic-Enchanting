@@ -1,35 +1,35 @@
 {
-  "anvil_cost": 10,
-  "description": {
-    "color": "dark_green",
-    "translate": "enchantment.apothic_enchanting.crescendo_of_bolts"
-  },
-  "effects": {
-    "apothic_enchanting:crescendo": [
-      {
-        "effect": {
-          "type": "minecraft:add",
-          "value": {
-            "type": "minecraft:linear",
-            "base": 1.0,
-            "per_level_above_first": 1.0
-          }
-        }
-      }
-    ]
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 5,
-  "min_cost": {
-    "base": 55,
-    "per_level_above_first": 30
-  },
-  "slots": [
-    "hand"
-  ],
-  "supported_items": "#minecraft:enchantable/crossbow",
-  "weight": 1
+    "anvil_cost": 10,
+    "description": {
+        "color": "dark_green",
+        "translate": "enchantment.apothic_enchanting.crescendo_of_bolts"
+    },
+    "effects": {
+        "apothic_enchanting:crescendo": [
+            {
+                "effect": {
+                    "type": "minecraft:add",
+                    "value": {
+                        "type": "minecraft:linear",
+                        "base": 1.0,
+                        "per_level_above_first": 1.0
+                    }
+                }
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 5,
+    "min_cost": {
+        "base": 55,
+        "per_level_above_first": 30
+    },
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#minecraft:enchantable/crossbow",
+    "weight": 1
 }

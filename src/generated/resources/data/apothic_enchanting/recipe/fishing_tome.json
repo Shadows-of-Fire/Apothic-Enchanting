@@ -1,25 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "B": {
-      "item": "minecraft:blaze_rod"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "B": {
+            "item": "minecraft:blaze_rod"
+        },
+        "O": {
+            "item": "minecraft:book"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
     },
-    "O": {
-      "item": "minecraft:book"
-    },
-    "S": {
-      "item": "minecraft:stick"
+    "pattern": [
+        "  B",
+        " SO",
+        "S O"
+    ],
+    "result": {
+        "count": 2,
+        "id": "apothic_enchanting:fishing_tome"
     }
-  },
-  "pattern": [
-    "  B",
-    " SO",
-    "S O"
-  ],
-  "result": {
-    "count": 2,
-    "id": "apothic_enchanting:fishing_tome"
-  }
 }

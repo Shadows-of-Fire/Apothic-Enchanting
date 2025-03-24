@@ -1,6 +1,6 @@
 {
-  "remove": [
-    "minecraft:protection"
-  ],
-  "values": []
+    "remove": [
+        "minecraft:protection"
+    ],
+    "values": []
 }

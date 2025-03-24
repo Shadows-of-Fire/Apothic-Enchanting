@@ -1,23 +1,23 @@
 {
-  "values": [
-    "apothic_enchanting:berserkers_fury",
-    "apothic_enchanting:boon_of_the_earth",
-    "apothic_enchanting:chainsaw",
-    "apothic_enchanting:chromatic",
-    "apothic_enchanting:crescendo_of_bolts",
-    "apothic_enchanting:endless_quiver",
-    "apothic_enchanting:growth_serum",
-    "apothic_enchanting:icy_thorns",
-    "apothic_enchanting:knowledge_of_the_ages",
-    "apothic_enchanting:life_mending",
-    "apothic_enchanting:miners_fervor",
-    "apothic_enchanting:natures_blessing",
-    "apothic_enchanting:rebounding",
-    "apothic_enchanting:reflective_defenses",
-    "apothic_enchanting:scavenger",
-    "apothic_enchanting:shield_bash",
-    "apothic_enchanting:stable_footing",
-    "apothic_enchanting:tempting",
-    "apothic_enchanting:worker_exploitation"
-  ]
+    "values": [
+        "apothic_enchanting:berserkers_fury",
+        "apothic_enchanting:boon_of_the_earth",
+        "apothic_enchanting:chainsaw",
+        "apothic_enchanting:chromatic",
+        "apothic_enchanting:crescendo_of_bolts",
+        "apothic_enchanting:endless_quiver",
+        "apothic_enchanting:growth_serum",
+        "apothic_enchanting:icy_thorns",
+        "apothic_enchanting:knowledge_of_the_ages",
+        "apothic_enchanting:life_mending",
+        "apothic_enchanting:miners_fervor",
+        "apothic_enchanting:natures_blessing",
+        "apothic_enchanting:rebounding",
+        "apothic_enchanting:reflective_defenses",
+        "apothic_enchanting:scavenger",
+        "apothic_enchanting:shield_bash",
+        "apothic_enchanting:stable_footing",
+        "apothic_enchanting:tempting",
+        "apothic_enchanting:worker_exploitation"
+    ]
 }

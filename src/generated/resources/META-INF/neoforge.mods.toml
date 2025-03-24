@@ -29,14 +29,14 @@ config="apothic_enchanting.mixins.json"
 [[dependencies.apothic_enchanting]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.62,)"
+    versionRange="[21.1.138,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.apothic_enchanting]]
     modId="placebo"
     type="required"
-    versionRange="[9.6.3-beta1,)"
+    versionRange="[9.6.5,)"
     ordering="NONE"
     side="BOTH"
 

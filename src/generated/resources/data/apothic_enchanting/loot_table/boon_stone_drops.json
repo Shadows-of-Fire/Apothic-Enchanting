@@ -1,0 +1,113 @@
+{
+    "type": "minecraft:hit_block",
+    "pools": [
+        {
+            "bonus_rolls": {
+                "type": "minecraft:uniform",
+                "max": 0.02,
+                "min": 0.0
+            },
+            "entries": [
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 5,
+                    "min": 3,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:raw_copper"
+                    },
+                    "weight": 100
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 5,
+                    "min": 3,
+                    "quality": 1,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:raw_iron"
+                    },
+                    "weight": 100
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 10,
+                    "min": 2,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:coal"
+                    },
+                    "weight": 100
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 5,
+                    "min": 1,
+                    "quality": 2,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:raw_gold"
+                    },
+                    "weight": 20
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 7,
+                    "min": 1,
+                    "quality": 2,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:lapis_lazuli"
+                    },
+                    "weight": 20
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 1,
+                    "min": 1,
+                    "quality": 3,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:diamond"
+                    },
+                    "weight": 5
+                }
+            ],
+            "rolls": 1.0
+        },
+        {
+            "bonus_rolls": 0.0,
+            "conditions": [
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "biomes": "#minecraft:is_mountain",
+                        "position": {
+                            "y": {
+                                "min": 32.0
+                            }
+                        }
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 1,
+                    "min": 1,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:emerald"
+                    },
+                    "weight": 15
+                },
+                {
+                    "type": "minecraft:empty",
+                    "weight": 85
+                }
+            ],
+            "rolls": 1.0
+        }
+    ],
+    "random_sequence": "apothic_enchanting:boon_stone_drops"
+}

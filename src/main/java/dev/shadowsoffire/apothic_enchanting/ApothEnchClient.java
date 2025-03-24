@@ -197,7 +197,7 @@ public class ApothEnchClient {
         public void drawAnvilCostBlob(ScreenEvent.Render.Post e) {
             if (e.getScreen() instanceof AnvilScreen anv) {
                 int level = anv.getMenu().getCost();
-                if (level <= 0 || !anv.getMenu().getSlot(anv.getMenu().getResultSlot()).hasItem()) return;
+                if (level <= 0 || !anv.getMenu().getSlot(anv.getMenu().getResultSlot()).hasItem() || level == Integer.MAX_VALUE) return;
                 List<Component> list = new ArrayList<>();
                 list.add(TooltipUtil.lang("info", "anvil_at", level).withStyle(ChatFormatting.UNDERLINE, ChatFormatting.GREEN));
                 int expCost = EnchantmentUtils.getTotalExperienceForLevel(level);

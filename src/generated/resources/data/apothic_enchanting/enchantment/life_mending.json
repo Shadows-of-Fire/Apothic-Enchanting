@@ -1,40 +1,40 @@
 {
-  "anvil_cost": 10,
-  "description": {
-    "color": "dark_red",
-    "translate": "enchantment.apothic_enchanting.life_mending"
-  },
-  "effects": {
-    "apothic_enchanting:repair_with_hp": [
-      {
-        "effect": {
-          "type": "minecraft:add",
-          "value": {
-            "type": "apothic_enchanting:exponential",
-            "base": 2.0,
-            "exponent": {
-              "type": "minecraft:linear",
-              "base": 0.0,
-              "per_level_above_first": 1.0
+    "anvil_cost": 10,
+    "description": {
+        "color": "dark_red",
+        "translate": "enchantment.apothic_enchanting.life_mending"
+    },
+    "effects": {
+        "apothic_enchanting:repair_with_hp": [
+            {
+                "effect": {
+                    "type": "minecraft:add",
+                    "value": {
+                        "type": "apothic_enchanting:exponential",
+                        "base": 2.0,
+                        "exponent": {
+                            "type": "minecraft:linear",
+                            "base": 0.0,
+                            "per_level_above_first": 1.0
+                        }
+                    }
+                }
             }
-          }
-        }
-      }
-    ]
-  },
-  "exclusive_set": "minecraft:mending",
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 3,
-  "min_cost": {
-    "base": 65,
-    "per_level_above_first": 35
-  },
-  "slots": [
-    "any"
-  ],
-  "supported_items": "#minecraft:enchantable/durability",
-  "weight": 1
+        ]
+    },
+    "exclusive_set": "minecraft:mending",
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 3,
+    "min_cost": {
+        "base": 65,
+        "per_level_above_first": 35
+    },
+    "slots": [
+        "any"
+    ],
+    "supported_items": "#minecraft:enchantable/durability",
+    "weight": 1
 }

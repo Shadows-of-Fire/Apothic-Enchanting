@@ -1,27 +1,27 @@
 {
-  "anvil_cost": 3,
-  "description": {
-    "translate": "enchantment.apothic_enchanting.natures_blessing"
-  },
-  "effects": {
-    "apothic_enchanting:bonemeal_crops": {
-      "type": "minecraft:linear",
-      "base": 5.0,
-      "per_level_above_first": -1.0
-    }
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 3,
-  "min_cost": {
-    "base": 15,
-    "per_level_above_first": 10
-  },
-  "slots": [
-    "hand"
-  ],
-  "supported_items": "#minecraft:hoes",
-  "weight": 2
+    "anvil_cost": 3,
+    "description": {
+        "translate": "enchantment.apothic_enchanting.natures_blessing"
+    },
+    "effects": {
+        "apothic_enchanting:bonemeal_crops": {
+            "type": "minecraft:linear",
+            "base": 5.0,
+            "per_level_above_first": -1.0
+        }
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 3,
+    "min_cost": {
+        "base": 15,
+        "per_level_above_first": 10
+    },
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#minecraft:hoes",
+    "weight": 2
 }

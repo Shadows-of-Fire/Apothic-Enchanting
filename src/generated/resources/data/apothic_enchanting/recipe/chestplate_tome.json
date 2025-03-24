@@ -1,22 +1,22 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "B": {
-      "item": "minecraft:book"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "B": {
+            "item": "minecraft:book"
+        },
+        "L": {
+            "item": "minecraft:blaze_rod"
+        }
     },
-    "L": {
-      "item": "minecraft:blaze_rod"
+    "pattern": [
+        "BLB",
+        "BBB",
+        "BBB"
+    ],
+    "result": {
+        "count": 8,
+        "id": "apothic_enchanting:chestplate_tome"
     }
-  },
-  "pattern": [
-    "BLB",
-    "BBB",
-    "BBB"
-  ],
-  "result": {
-    "count": 8,
-    "id": "apothic_enchanting:chestplate_tome"
-  }
 }

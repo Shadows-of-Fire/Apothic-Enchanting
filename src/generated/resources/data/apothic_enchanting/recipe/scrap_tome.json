@@ -1,22 +1,22 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "A": {
-      "item": "minecraft:anvil"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "A": {
+            "item": "minecraft:anvil"
+        },
+        "B": {
+            "item": "minecraft:book"
+        }
     },
-    "B": {
-      "item": "minecraft:book"
+    "pattern": [
+        "BBB",
+        "BAB",
+        "BBB"
+    ],
+    "result": {
+        "count": 8,
+        "id": "apothic_enchanting:scrap_tome"
     }
-  },
-  "pattern": [
-    "BBB",
-    "BAB",
-    "BBB"
-  ],
-  "result": {
-    "count": 8,
-    "id": "apothic_enchanting:scrap_tome"
-  }
 }

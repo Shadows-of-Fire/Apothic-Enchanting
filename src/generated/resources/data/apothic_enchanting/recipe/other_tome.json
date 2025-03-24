@@ -1,32 +1,32 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "ingredients": [
-    {
-      "item": "minecraft:book"
-    },
-    {
-      "item": "minecraft:book"
-    },
-    {
-      "item": "minecraft:book"
-    },
-    {
-      "item": "minecraft:book"
-    },
-    {
-      "item": "minecraft:book"
-    },
-    {
-      "item": "minecraft:book"
-    },
-    {
-      "item": "minecraft:blaze_rod"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "ingredients": [
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "item": "minecraft:blaze_rod"
+        }
+    ],
+    "result": {
+        "count": 6,
+        "id": "apothic_enchanting:other_tome"
     }
-  ],
-  "result": {
-    "count": 6,
-    "id": "apothic_enchanting:other_tome"
-  }
 }

@@ -1,25 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "B": {
-      "tag": "c:bookshelves"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "B": {
+            "tag": "c:bookshelves"
+        },
+        "C": {
+            "item": "minecraft:calcite"
+        },
+        "U": {
+            "item": "minecraft:budding_amethyst"
+        }
     },
-    "C": {
-      "item": "minecraft:calcite"
-    },
-    "U": {
-      "item": "minecraft:budding_amethyst"
+    "pattern": [
+        "CCC",
+        "CBC",
+        "CUC"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:geode_shelf"
     }
-  },
-  "pattern": [
-    "CCC",
-    "CBC",
-    "CUC"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:geode_shelf"
-  }
 }

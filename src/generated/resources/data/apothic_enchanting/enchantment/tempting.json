@@ -1,23 +1,23 @@
 {
-  "anvil_cost": 1,
-  "description": {
-    "translate": "enchantment.apothic_enchanting.tempting"
-  },
-  "effects": {
-    "apothic_enchanting:tempting": {}
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 1,
-  "min_cost": {
-    "base": 0,
-    "per_level_above_first": 0
-  },
-  "slots": [
-    "hand"
-  ],
-  "supported_items": "#minecraft:hoes",
-  "weight": 5
+    "anvil_cost": 1,
+    "description": {
+        "translate": "enchantment.apothic_enchanting.tempting"
+    },
+    "effects": {
+        "apothic_enchanting:tempting": {}
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#minecraft:hoes",
+    "weight": 5
 }

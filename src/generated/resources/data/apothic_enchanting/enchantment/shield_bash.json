@@ -1,54 +1,54 @@
 {
-  "anvil_cost": 1,
-  "description": {
-    "translate": "enchantment.apothic_enchanting.shield_bash"
-  },
-  "effects": {
-    "minecraft:damage": [
-      {
-        "effect": {
-          "type": "minecraft:add",
-          "value": {
-            "type": "minecraft:linear",
-            "base": 3.5,
-            "per_level_above_first": 3.5
-          }
-        }
-      }
-    ],
-    "minecraft:post_attack": [
-      {
-        "affected": "attacker",
-        "effect": {
-          "type": "minecraft:damage_item",
-          "amount": {
-            "type": "minecraft:clamped",
-            "max": 1024.0,
-            "min": 1.0,
-            "value": {
-              "type": "minecraft:linear",
-              "base": 20.0,
-              "per_level_above_first": -2.0
+    "anvil_cost": 1,
+    "description": {
+        "translate": "enchantment.apothic_enchanting.shield_bash"
+    },
+    "effects": {
+        "minecraft:damage": [
+            {
+                "effect": {
+                    "type": "minecraft:add",
+                    "value": {
+                        "type": "minecraft:linear",
+                        "base": 3.5,
+                        "per_level_above_first": 3.5
+                    }
+                }
             }
-          }
-        },
-        "enchanted": "attacker"
-      }
-    ]
-  },
-  "exclusive_set": "#minecraft:exclusive_set/damage",
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 4,
-  "min_cost": {
-    "base": 1,
-    "per_level_above_first": 17
-  },
-  "slots": [
-    "mainhand"
-  ],
-  "supported_items": "#c:tools/shield",
-  "weight": 2
+        ],
+        "minecraft:post_attack": [
+            {
+                "affected": "attacker",
+                "effect": {
+                    "type": "minecraft:damage_item",
+                    "amount": {
+                        "type": "minecraft:clamped",
+                        "max": 1024.0,
+                        "min": 1.0,
+                        "value": {
+                            "type": "minecraft:linear",
+                            "base": 20.0,
+                            "per_level_above_first": -2.0
+                        }
+                    }
+                },
+                "enchanted": "attacker"
+            }
+        ]
+    },
+    "exclusive_set": "#minecraft:exclusive_set/damage",
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 4,
+    "min_cost": {
+        "base": 1,
+        "per_level_above_first": 17
+    },
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": "#c:tools/shield",
+    "weight": 2
 }

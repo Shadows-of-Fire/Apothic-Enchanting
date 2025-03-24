@@ -1,25 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "H": {
-      "item": "minecraft:heart_of_the_sea"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "H": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "I": {
+            "item": "apothic_enchanting:infused_seashelf"
+        },
+        "P": {
+            "item": "minecraft:prismarine_shard"
+        }
     },
-    "I": {
-      "item": "apothic_enchanting:infused_seashelf"
-    },
-    "P": {
-      "item": "minecraft:prismarine_shard"
+    "pattern": [
+        " H ",
+        "PIP",
+        "PPP"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:heart_seashelf"
     }
-  },
-  "pattern": [
-    " H ",
-    "PIP",
-    "PPP"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:heart_seashelf"
-  }
 }

@@ -1,24 +1,24 @@
 {
-  "anvil_cost": 10,
-  "description": {
-    "color": "dark_green",
-    "translate": "enchantment.apothic_enchanting.growth_serum"
-  },
-  "effects": {
-    "apothic_enchanting:growth_serum": 0.5
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 1,
-  "min_cost": {
-    "base": 40,
-    "per_level_above_first": 0
-  },
-  "slots": [
-    "hand"
-  ],
-  "supported_items": "#c:tools/shear",
-  "weight": 1
+    "anvil_cost": 10,
+    "description": {
+        "color": "dark_green",
+        "translate": "enchantment.apothic_enchanting.growth_serum"
+    },
+    "effects": {
+        "apothic_enchanting:growth_serum": 0.5
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 40,
+        "per_level_above_first": 0
+    },
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#c:tools/shear",
+    "weight": 1
 }

@@ -1,25 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "D": {
-      "item": "apothic_enchanting:endshelf"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "D": {
+            "item": "apothic_enchanting:endshelf"
+        },
+        "E": {
+            "item": "minecraft:end_rod"
+        },
+        "N": {
+            "tag": "c:ender_pearls"
+        }
     },
-    "E": {
-      "item": "minecraft:end_rod"
-    },
-    "N": {
-      "tag": "c:ender_pearls"
+    "pattern": [
+        "E E",
+        "NDN",
+        "E E"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:pearl_endshelf"
     }
-  },
-  "pattern": [
-    "E E",
-    "NDN",
-    "E E"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:pearl_endshelf"
-  }
 }

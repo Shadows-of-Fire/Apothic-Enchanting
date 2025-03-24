@@ -1,24 +1,24 @@
 {
-  "anvil_cost": 10,
-  "description": {
-    "color": "dark_green",
-    "translate": "enchantment.apothic_enchanting.chainsaw"
-  },
-  "effects": {
-    "apothic_enchanting:chainsaw": {}
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 1,
-  "min_cost": {
-    "base": 55,
-    "per_level_above_first": 0
-  },
-  "slots": [
-    "mainhand"
-  ],
-  "supported_items": "#minecraft:axes",
-  "weight": 1
+    "anvil_cost": 10,
+    "description": {
+        "color": "dark_green",
+        "translate": "enchantment.apothic_enchanting.chainsaw"
+    },
+    "effects": {
+        "apothic_enchanting:chainsaw": {}
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 55,
+        "per_level_above_first": 0
+    },
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": "#minecraft:axes",
+    "weight": 1
 }

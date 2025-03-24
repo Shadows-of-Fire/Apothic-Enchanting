@@ -1,0 +1,88 @@
+{
+    "type": "minecraft:hit_block",
+    "pools": [
+        {
+            "bonus_rolls": {
+                "type": "minecraft:uniform",
+                "max": 0.02,
+                "min": 0.0
+            },
+            "entries": [
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 5,
+                    "min": 3,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:quartz"
+                    },
+                    "weight": 150
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 5,
+                    "min": 1,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:raw_gold"
+                    },
+                    "weight": 100
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 10,
+                    "min": 2,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:glowstone_dust"
+                    },
+                    "weight": 60
+                },
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 1,
+                    "min": 0,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:ancient_debris"
+                    }
+                }
+            ],
+            "rolls": 1.0
+        },
+        {
+            "bonus_rolls": 0.0,
+            "conditions": [
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "position": {
+                            "y": {
+                                "max": 18.0,
+                                "min": 12.0
+                            }
+                        }
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "placebo:stack_entry",
+                    "max": 1,
+                    "min": 1,
+                    "stack": {
+                        "count": 1,
+                        "id": "minecraft:ancient_debris"
+                    },
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:empty",
+                    "weight": 97
+                }
+            ],
+            "rolls": 1.0
+        }
+    ],
+    "random_sequence": "apothic_enchanting:boon_netherrack_drops"
+}

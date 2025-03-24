@@ -1,6 +1,6 @@
 {
-  "remove": [
-    "minecraft:sharpness"
-  ],
-  "values": []
+    "remove": [
+        "minecraft:sharpness"
+    ],
+    "values": []
 }

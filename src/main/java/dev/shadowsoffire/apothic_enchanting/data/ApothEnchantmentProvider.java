@@ -24,6 +24,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
@@ -42,6 +43,7 @@ import net.minecraft.world.item.enchantment.effects.AddValue;
 import net.minecraft.world.item.enchantment.effects.ApplyMobEffect;
 import net.minecraft.world.item.enchantment.effects.DamageItem;
 import net.minecraft.world.item.enchantment.effects.SetValue;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.predicates.DamageSourceCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.EnchantmentLevelProvider;
@@ -53,6 +55,7 @@ public class ApothEnchantmentProvider {
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         HolderGetter<Enchantment> enchantments = context.lookup(Registries.ENCHANTMENT);
         HolderGetter<Item> items = context.lookup(Registries.ITEM);
+        HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
 
         register(context, Ench.Enchantments.BERSERKERS_FURY,
             enchantment(
@@ -179,9 +182,19 @@ public class ApothEnchantmentProvider {
                 .withCustomName(c -> c.withStyle(ChatFormatting.DARK_GREEN))
                 .withSpecialEffect(Ench.EnchantEffects.EARTHS_BOON,
                     new BoonComponent(
-                        Tags.Blocks.STONES,
-                        Ench.Tags.BOON_DROPS,
-                        List.of(noCondition(new AddValue(LevelBasedValue.perLevel(0.01F)))))));
+                        List.of(
+                            new BoonComponent.BoonData(
+                                blocks.getOrThrow(BlockTags.DEEPSLATE_ORE_REPLACEABLES),
+                                Ench.LootTables.BOON_DEEPSLATE_DROPS,
+                                List.of(noCondition(new AddValue(LevelBasedValue.perLevel(0.015F))))),
+                            new BoonComponent.BoonData(
+                                blocks.getOrThrow(BlockTags.STONE_ORE_REPLACEABLES),
+                                Ench.LootTables.BOON_STONE_DROPS,
+                                List.of(noCondition(new AddValue(LevelBasedValue.perLevel(0.01F))))),
+                            new BoonComponent.BoonData(
+                                blocks.getOrThrow(BlockTags.BASE_STONE_NETHER),
+                                Ench.LootTables.BOON_NETHER_DROPS,
+                                List.of(noCondition(new AddValue(LevelBasedValue.perLevel(0.01F)))))))));
 
         register(context, Ench.Enchantments.CRESCENDO_OF_BOLTS,
             enchantment(
@@ -295,7 +308,7 @@ public class ApothEnchantmentProvider {
                     EnchantmentTarget.ATTACKER,
                     new ApplyMobEffect(
                         HolderSet.direct(MobEffects.MOVEMENT_SLOWDOWN),
-                        LevelBasedValue.constant(200), LevelBasedValue.constant(400),
+                        LevelBasedValue.constant(10), LevelBasedValue.constant(20),
                         LevelBasedValue.constant(0), new LevelBasedValue.Clamped(LevelBasedValue.perLevel(2), 1, 4)),
                     LootItemRandomChanceCondition.randomChance(EnchantmentLevelProvider.forEnchantmentLevel(LevelBasedValue.perLevel(0.5F)))));
 

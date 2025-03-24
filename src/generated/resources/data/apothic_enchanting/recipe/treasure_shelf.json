@@ -1,28 +1,28 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "D": {
-      "item": "apothic_enchanting:deepshelf"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "D": {
+            "item": "apothic_enchanting:deepshelf"
+        },
+        "G": {
+            "tag": "c:gems/diamond"
+        },
+        "S": {
+            "tag": "c:storage_blocks/gold"
+        },
+        "T": {
+            "tag": "c:storage_blocks/emerald"
+        }
     },
-    "G": {
-      "tag": "c:gems/diamond"
-    },
-    "S": {
-      "tag": "c:storage_blocks/gold"
-    },
-    "T": {
-      "tag": "c:storage_blocks/emerald"
+    "pattern": [
+        "SDS",
+        "GTG",
+        "SDS"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:treasure_shelf"
     }
-  },
-  "pattern": [
-    "SDS",
-    "GTG",
-    "SDS"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:treasure_shelf"
-  }
 }

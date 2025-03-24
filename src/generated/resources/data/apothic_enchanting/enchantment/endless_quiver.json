@@ -1,32 +1,32 @@
 {
-  "anvil_cost": 10,
-  "description": {
-    "color": "dark_green",
-    "translate": "enchantment.apothic_enchanting.endless_quiver"
-  },
-  "effects": {
-    "minecraft:ammo_use": [
-      {
-        "effect": {
-          "type": "minecraft:set",
-          "value": 0.0
-        }
-      }
-    ]
-  },
-  "exclusive_set": "minecraft:infinity",
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 1,
-  "min_cost": {
-    "base": 60,
-    "per_level_above_first": 0
-  },
-  "slots": [
-    "hand"
-  ],
-  "supported_items": "#minecraft:enchantable/bow",
-  "weight": 1
+    "anvil_cost": 10,
+    "description": {
+        "color": "dark_green",
+        "translate": "enchantment.apothic_enchanting.endless_quiver"
+    },
+    "effects": {
+        "minecraft:ammo_use": [
+            {
+                "effect": {
+                    "type": "minecraft:set",
+                    "value": 0.0
+                }
+            }
+        ]
+    },
+    "exclusive_set": "minecraft:infinity",
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 60,
+        "per_level_above_first": 0
+    },
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#minecraft:enchantable/bow",
+    "weight": 1
 }

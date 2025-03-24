@@ -1,25 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "B": {
-      "item": "minecraft:blaze_powder"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "B": {
+            "item": "minecraft:blaze_powder"
+        },
+        "F": {
+            "item": "minecraft:fire_charge"
+        },
+        "I": {
+            "item": "apothic_enchanting:infused_hellshelf"
+        }
     },
-    "F": {
-      "item": "minecraft:fire_charge"
-    },
-    "I": {
-      "item": "apothic_enchanting:infused_hellshelf"
+    "pattern": [
+        " F ",
+        "FIF",
+        "BBB"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:blazing_hellshelf"
     }
-  },
-  "pattern": [
-    " F ",
-    "FIF",
-    "BBB"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:blazing_hellshelf"
-  }
 }

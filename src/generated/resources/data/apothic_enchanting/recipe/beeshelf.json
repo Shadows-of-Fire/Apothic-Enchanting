@@ -1,28 +1,28 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "B": {
-      "item": "minecraft:beehive"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "B": {
+            "item": "minecraft:beehive"
+        },
+        "H": {
+            "item": "minecraft:honeycomb"
+        },
+        "K": {
+            "tag": "c:bookshelves"
+        },
+        "O": {
+            "item": "minecraft:honey_block"
+        }
     },
-    "H": {
-      "item": "minecraft:honeycomb"
-    },
-    "K": {
-      "tag": "c:bookshelves"
-    },
-    "O": {
-      "item": "minecraft:honey_block"
+    "pattern": [
+        "HBH",
+        "OKO",
+        "HBH"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:beeshelf"
     }
-  },
-  "pattern": [
-    "HBH",
-    "OKO",
-    "HBH"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:beeshelf"
-  }
 }

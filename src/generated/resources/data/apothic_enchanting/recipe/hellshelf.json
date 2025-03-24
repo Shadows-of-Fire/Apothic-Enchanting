@@ -1,34 +1,34 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "B": {
-      "item": "minecraft:blaze_rod"
-    },
-    "N": {
-      "item": "minecraft:nether_bricks"
-    },
-    "O": {
-      "tag": "c:bookshelves"
-    },
-    "P": {
-      "type": "neoforge:components",
-      "components": {
-        "minecraft:potion_contents": {
-          "potion": "minecraft:regeneration"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "B": {
+            "item": "minecraft:blaze_rod"
+        },
+        "N": {
+            "item": "minecraft:nether_bricks"
+        },
+        "O": {
+            "tag": "c:bookshelves"
+        },
+        "P": {
+            "type": "neoforge:components",
+            "components": {
+                "minecraft:potion_contents": {
+                    "potion": "minecraft:regeneration"
+                }
+            },
+            "items": "minecraft:potion"
         }
-      },
-      "items": "minecraft:potion"
+    },
+    "pattern": [
+        "NNN",
+        "BOP",
+        "NNN"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:hellshelf"
     }
-  },
-  "pattern": [
-    "NNN",
-    "BOP",
-    "NNN"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:hellshelf"
-  }
 }

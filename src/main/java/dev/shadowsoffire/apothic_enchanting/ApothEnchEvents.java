@@ -150,10 +150,14 @@ public class ApothEnchEvents {
 
             if (knowledge.floatValue() > 0) {
                 int totalXp = 0;
-                for (ItemEntity i : e.getDrops()) {
-                    totalXp += i.getItem().getCount() * knowledge.floatValue();
+                Iterator<ItemEntity> it = e.getDrops().iterator();
+                while (it.hasNext()) {
+                    ItemEntity i = it.next();
+                    if (!i.getItem().is(Ench.Tags.CANNOT_BE_CONVERTED_TO_XP)) {
+                        totalXp += i.getItem().getCount() * knowledge.floatValue();
+                        it.remove();
+                    }
                 }
-                e.getDrops().clear();
 
                 Entity ded = e.getEntity();
                 while (totalXp > 0) {

@@ -65,6 +65,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
@@ -441,8 +442,13 @@ public class Ench {
     }
 
     public static final class Tags {
-        public static final TagKey<Item> BOON_DROPS = ItemTags.create(ApothicEnchanting.loc("boon_drops"));
+        // TODO: Replace this with a loot table.
         public static final TagKey<Item> SPEARFISHING_DROPS = ItemTags.create(ApothicEnchanting.loc("spearfishing_drops"));
+
+        /**
+         * Any items in this tag will not be converted to experience when the Drops to XP effect (KoTA) is active.
+         */
+        public static final TagKey<Item> CANNOT_BE_CONVERTED_TO_XP = ItemTags.create(ApothicEnchanting.loc("cannot_be_converted_to_xp"));
     }
 
     public static class Tiles {
@@ -454,6 +460,12 @@ public class Ench {
         public static final Supplier<BlockEntityType<BasicLibraryTile>> LIBRARY = R.blockEntity("library", BasicLibraryTile::new, () -> ImmutableSet.of(Blocks.LIBRARY.value()));
 
         private static void bootstrap() {}
+    }
+
+    public static class LootTables {
+        public static final ResourceKey<LootTable> BOON_STONE_DROPS = ResourceKey.create(Registries.LOOT_TABLE, ApothicEnchanting.loc("boon_stone_drops"));
+        public static final ResourceKey<LootTable> BOON_DEEPSLATE_DROPS = ResourceKey.create(Registries.LOOT_TABLE, ApothicEnchanting.loc("boon_deepslate_drops"));
+        public static final ResourceKey<LootTable> BOON_NETHER_DROPS = ResourceKey.create(Registries.LOOT_TABLE, ApothicEnchanting.loc("boon_netherrack_drops"));
     }
 
     public static void bootstrap(IEventBus bus) {

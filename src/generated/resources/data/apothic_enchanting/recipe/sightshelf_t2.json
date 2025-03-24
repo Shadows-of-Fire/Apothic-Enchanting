@@ -1,34 +1,34 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "apothic_enchanting",
-  "key": {
-    "E": {
-      "item": "minecraft:emerald_block"
-    },
-    "I": {
-      "tag": "c:ingots/netherite"
-    },
-    "P": {
-      "type": "neoforge:components",
-      "components": {
-        "minecraft:potion_contents": {
-          "potion": "minecraft:long_night_vision"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "group": "apothic_enchanting",
+    "key": {
+        "E": {
+            "item": "minecraft:emerald_block"
+        },
+        "I": {
+            "tag": "c:ingots/netherite"
+        },
+        "P": {
+            "type": "neoforge:components",
+            "components": {
+                "minecraft:potion_contents": {
+                    "potion": "minecraft:long_night_vision"
+                }
+            },
+            "items": "minecraft:potion"
+        },
+        "S": {
+            "item": "apothic_enchanting:sightshelf"
         }
-      },
-      "items": "minecraft:potion"
     },
-    "S": {
-      "item": "apothic_enchanting:sightshelf"
+    "pattern": [
+        "EIE",
+        "PSP",
+        "EIE"
+    ],
+    "result": {
+        "count": 1,
+        "id": "apothic_enchanting:sightshelf_t2"
     }
-  },
-  "pattern": [
-    "EIE",
-    "PSP",
-    "EIE"
-  ],
-  "result": {
-    "count": 1,
-    "id": "apothic_enchanting:sightshelf_t2"
-  }
 }

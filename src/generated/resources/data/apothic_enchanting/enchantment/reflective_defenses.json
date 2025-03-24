@@ -1,34 +1,34 @@
 {
-  "anvil_cost": 5,
-  "description": {
-    "translate": "enchantment.apothic_enchanting.reflective_defenses"
-  },
-  "effects": {
-    "apothic_enchanting:reflective": {
-      "proc_chance": {
-        "type": "minecraft:linear",
-        "base": 0.15,
-        "per_level_above_first": 0.1
-      },
-      "reflect_ratio": {
-        "type": "minecraft:linear",
-        "base": 0.15,
-        "per_level_above_first": 0.15
-      }
-    }
-  },
-  "max_cost": {
-    "base": 200,
-    "per_level_above_first": 0
-  },
-  "max_level": 5,
-  "min_cost": {
-    "base": 0,
-    "per_level_above_first": 18
-  },
-  "slots": [
-    "hand"
-  ],
-  "supported_items": "#c:tools/shield",
-  "weight": 2
+    "anvil_cost": 5,
+    "description": {
+        "translate": "enchantment.apothic_enchanting.reflective_defenses"
+    },
+    "effects": {
+        "apothic_enchanting:reflective": {
+            "proc_chance": {
+                "type": "minecraft:linear",
+                "base": 0.15,
+                "per_level_above_first": 0.1
+            },
+            "reflect_ratio": {
+                "type": "minecraft:linear",
+                "base": 0.15,
+                "per_level_above_first": 0.15
+            }
+        }
+    },
+    "max_cost": {
+        "base": 200,
+        "per_level_above_first": 0
+    },
+    "max_level": 5,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 18
+    },
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#c:tools/shield",
+    "weight": 2
 }

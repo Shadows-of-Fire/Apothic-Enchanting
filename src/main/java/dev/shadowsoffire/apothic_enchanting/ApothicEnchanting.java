@@ -37,6 +37,7 @@ import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.Holder;
 import net.minecraft.core.dispenser.ShearsDispenseItemBehavior;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.DataProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -141,6 +142,7 @@ public class ApothicEnchanting {
 
     @SubscribeEvent
     public void data(GatherDataEvent event) {
+        DataProvider.INDENT_WIDTH.set(4);
         DataGenBuilder.create(MODID, "minecraft")
             .registry(Registries.ENCHANTMENT, ApothEnchantmentProvider::bootstrap)
             .provider(LootProvider::create)

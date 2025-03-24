@@ -4,14 +4,14 @@
     "block.apothic_enchanting.hellshelf": "地獄の本棚",
     "block.apothic_enchanting.infused_hellshelf": "注入された地獄の本棚",
     "block.apothic_enchanting.blazing_hellshelf": "燃える地獄の本棚",
-    "block.apothic_enchanting.glowing_hellshelf": "輝く地獄の本棚",
+    "block.apothic_enchanting.glowing_hellshelf": "光宿る地獄の本棚",
     
     "block.apothic_enchanting.seashelf": "海の本棚",
     "block.apothic_enchanting.infused_seashelf": "注入された海の本棚",
     "block.apothic_enchanting.crystal_seashelf": "澄んだ海の本棚",
     "block.apothic_enchanting.heart_seashelf": "心宿る海の本棚",
     
-    "block.apothic_enchanting.dormant_deepshelf": "休眠する深淵の本棚",
+    "block.apothic_enchanting.dormant_deepshelf": "眠る深淵の本棚",
     "block.apothic_enchanting.deepshelf": "深淵の本棚",
     "block.apothic_enchanting.echoing_deepshelf": "反響する深淵の本棚",
     "block.apothic_enchanting.soul_touched_deepshelf": "魂宿る深淵の本棚",
@@ -21,8 +21,8 @@
     
     "block.apothic_enchanting.endshelf": "エンドの本棚",
     "block.apothic_enchanting.infused_endshelf": "注入されたエンドの本棚",
-    "block.apothic_enchanting.pearl_endshelf": "きらめくエンドの本棚",
-    "block.apothic_enchanting.draconic_endshelf": "竜のエンドの本棚",
+    "block.apothic_enchanting.pearl_endshelf": "真珠宿るエンドの本棚",
+    "block.apothic_enchanting.draconic_endshelf": "竜宿るエンドの本棚",
     
     "block.apothic_enchanting.beeshelf": "蜂の本棚",
     "block.apothic_enchanting.melonshelf": "スイカの本棚",
@@ -38,7 +38,7 @@
     "block.apothic_enchanting.library": "エンチャント書庫",
     "block.apothic_enchanting.ender_library": "アレクサンドリア書庫",
 
-    "info.apothic_enchanting.ench_power": "エンチャント出力を%s与える。",
+    "info.apothic_enchanting.ench_power": "エンチャント出力を%s与える",
     "info.apothic_enchanting.masterwork": "傑作",
     "info.apothic_enchanting.twisted": "諸刃",
     "info.apothic_enchanting.corrupted": "代償",
@@ -71,7 +71,7 @@
     "gui.apothic_enchanting.enchant.eterna.desc3": "現在の値: %s/%s",
     "gui.apothic_enchanting.enchant.quanta.desc": " - 純粋な混沌",
     "gui.apothic_enchanting.enchant.quanta.desc2": "基礎となるランダム性を強め",
-    "gui.apothic_enchanting.enchant.quanta.desc3": " 悪影響を軽減する",
+    "gui.apothic_enchanting.enchant.quanta.desc3": "悪影響を軽減する",
     "gui.apothic_enchanting.enchant.quanta.desc4": "現在の値: %s%%",
     "gui.apothic_enchanting.enchant.arcana.desc": " - エーテルの純度",
     "gui.apothic_enchanting.enchant.arcana.desc2": "レアエンチャントを出やすくし",
@@ -84,7 +84,7 @@
     "info.apothic_enchanting.quanta_reduc": "低減の可能性: %s%%",
     "info.apothic_enchanting.quanta_growth": "成長の可能性: %s%%",
     "info.apothic_enchanting.ench_bonus": "エンチャント適性ボーナス: %s%%",
-    "info.apothic_enchanting.rel_weights": "相対的重み",
+    "info.apothic_enchanting.rel_weights": "相対重み",
     "info.apothic_enchanting.weight": "%s: %s",
     "info.apothic_enchanting.eterna_at_least": "最低限%s/%sが必要。",
     "info.apothic_enchanting.percent_at_least": "最低限%s%%が必要。",
@@ -102,39 +102,39 @@
     "info.apothic_enchanting.tradeable.not": "取引不可",
     "info.apothic_enchanting.treasure": "お宝",
     "info.apothic_enchanting.treasure.not": "通常品",
-    "info.apothic_enchanting.filtering_shelf": "格納した本のエンチャントがテーブルに表れなくなる。",
-    "info.apothic_enchanting.filtering_shelf2": "格納した本の数に応じてエテルナとアルカナを増加させる。",
+    "info.apothic_enchanting.filtering_shelf": "格納した本のエンチャントがテーブルに表れなくなる",
+    "info.apothic_enchanting.filtering_shelf2": "格納した本の数に応じてエテルナとアルカナを増加させる",
     "info.apothic_enchanting.limit": "[限界値: %s]",
     
     "enchantment.apothic_enchanting.infusion": "注入",
     "enchantment.apothic_enchanting.infusion.desc": "エンチャントクラフト用のプレースホルダー",
     
     "enchantment.apothic_enchanting.mounted_strike": "騎馬戦",
-    "enchantment.apothic_enchanting.mounted_strike.desc": "騎乗時に追加ダメージを与えます。",
+    "enchantment.apothic_enchanting.mounted_strike.desc": "騎乗時に追加ダメージを与える",
     
     "enchantment.apothic_enchanting.miners_fervor": "鉱夫の熱意",
-    "enchantment.apothic_enchanting.miners_fervor.desc": "採掘速度が高速になるが、即時採掘は不可。",
+    "enchantment.apothic_enchanting.miners_fervor.desc": "採掘速度が高速になるが、即時採掘は不可",
     
     "enchantment.apothic_enchanting.stable_footing": "足場",
-    "enchantment.apothic_enchanting.stable_footing.desc": "浮遊時の採掘速度ペナルティを無効化する。",
+    "enchantment.apothic_enchanting.stable_footing.desc": "浮遊時の採掘速度ペナルティを無効化する",
     
     "enchantment.apothic_enchanting.scavenger": "ゴミあさり",
-    "enchantment.apothic_enchanting.scavenger.desc": "Mobを倒した時のドロップ抽選が一定確率で2回になる。",
+    "enchantment.apothic_enchanting.scavenger.desc": "Mobを倒した時のドロップ抽選が一定確率で2回になる",
     
     "enchantment.apothic_enchanting.life_mending": "命の修復",
-    "enchantment.apothic_enchanting.life_mending.desc": "たまに自身のライフを消費して装備を修繕する。",
+    "enchantment.apothic_enchanting.life_mending.desc": "たまに自身のライフを消費して装備を修繕する",
     
     "enchantment.apothic_enchanting.icy_thorns": "氷の棘",
-    "enchantment.apothic_enchanting.icy_thorns.desc": "攻撃者の動きを鈍らせる。",
+    "enchantment.apothic_enchanting.icy_thorns.desc": "攻撃者の動きを鈍らせる",
     
     "enchantment.apothic_enchanting.bane_of_illagers": "イリジャー特攻",
-    "enchantment.apothic_enchanting.bane_of_illagers.desc": "イリジャーへのダメージが増加する。",
+    "enchantment.apothic_enchanting.bane_of_illagers.desc": "イリジャーへのダメージが増加する",
     
-    "death.attack.apothic_enchanting:corrupted": "%sは代償エンチャントによって命を吸い尽くされた。",
-    "death.attack.apothic_enchanting:corrupted.player": "%sは%sによってイケニエとして捧げられた。",
+    "death.attack.apothic_enchanting:corrupted": "%sは代償エンチャントによって命を吸い尽くされた",
+    "death.attack.apothic_enchanting:corrupted.player": "%sは%sの犠牲になった",
     
     "item.apothic_enchanting.prismatic_web": "虹色のクモの巣",
-    "info.apothic_enchanting.prismatic_cobweb": "呪いの除去に使用できます。",
+    "info.apothic_enchanting.prismatic_cobweb": "呪いを除去できる",
     
     "item.apothic_enchanting.inert_trident": "不活性なトライデント",
     "item.apothic_enchanting.other_tome": "その他の書物",
@@ -152,8 +152,8 @@
     "item.apothic_enchanting.warden_tendril": "ウォーデンの巻きひげ",
     "item.apothic_enchanting.infused_breath": "注入されたドラゴンブレス",
     
-    "info.apothic_enchanting.tome_error": "バグのあるアイテム - 空中で右クリックするとエンチャント本に変わる。",
-    "info.apothic_enchanting.other_tome": "様々なエンチャントを書き込める",
+    "info.apothic_enchanting.tome_error": "バグのあるアイテム - 空中で右クリックするとエンチャント本に変わる",
+    "info.apothic_enchanting.other_tome": "その他のエンチャントを書き込める",
     "info.apothic_enchanting.helmet_tome": "ヘルメットのエンチャントだけを書き込める",
     "info.apothic_enchanting.chestplate_tome": "チェストプレートのエンチャントだけを書き込める",
     "info.apothic_enchanting.leggings_tome": "レギンスのエンチャントだけを書き込める",
@@ -179,7 +179,7 @@
     "enchantment.apothic_enchanting.reflective_defenses.desc": "ブロックした攻撃によって攻撃した者がダメージを受ける",
     
     "enchantment.apothic_enchanting.berserkers_fury": "狂戦士の怒り",
-    "enchantment.apothic_enchanting.berserkers_fury.desc": "ダメージを受けると怒り狂う [⌛ 0:45]",
+    "enchantment.apothic_enchanting.berserkers_fury.desc": "ダメージを受けると怒り狂う [⌛0:45]",
     
     "enchantment.apothic_enchanting.knowledge_of_the_ages": "温故知新",
     "enchantment.apothic_enchanting.knowledge_of_the_ages.desc": "敵のドロップ品が経験値に直接変換される",
@@ -194,7 +194,7 @@
     "enchantment.apothic_enchanting.magic_protection.desc": "魔法による与ダメージと被ダメージが減少する",
     
     "enchantment.apothic_enchanting.crescendo_of_bolts": "クレッシェンド",
-    "enchantment.apothic_enchanting.crescendo_of_bolts.desc": "クロスボウで一定確率の追加射撃",
+    "enchantment.apothic_enchanting.crescendo_of_bolts.desc": "クロスボウで一定確率の追加射撃を放つ",
     
     "enchantment.apothic_enchanting.chromatic": "玉虫色",
     "enchantment.apothic_enchanting.chromatic.desc": "刈り取られた羊毛はランダムな色に変わる",
@@ -227,19 +227,19 @@
     "tooltip.enchlib.item": "%d個のエンチャントを保存しています。",
     "tooltip.enchlib.nfilt": "名前フィルター",
     "tooltip.enchlib.ifilt": "アイテムフィルター",
-    "info.apothic_enchanting.library": "エンチャント書庫はエンチャントを保存するブロックです。エンチャントされた本を入れると、その本が預けられます。保存されているエンチャントを左クリックすると、そのエンチャントが1レベル抽出されます。Shiftを押しながらクリックすると、利用可能な最大レベルが抽出されます。",
-    "info.apothic_enchanting.runes": "何かが見える…",
+    "info.apothic_enchanting.library": "エンチャント書庫はエンチャントを保存するブロック。エンチャントされた本を入れると預けることが可能。保存されているエンチャントを左クリックすると1レベル分だけ抽出され、Shiftを押しながらクリックすると利用可能な最大レベルが抽出される。",
+    "info.apothic_enchanting.runes": "何かが見える...",
     "info.apothic_enchanting.no_clue": "何も見えない",
     "info.apothic_enchanting.runes_all": "全てを見通した！",
     "info.apothic_enchanting.arcana_bonus": "秘術の強化",
-    "info.apothic_enchanting.weights_changed": "レアリティ比重が変更されました",
+    "info.apothic_enchanting.weights_changed": "レアリティ比重が変更された",
     "info.apothic_enchanting.min_enchants": "最低%sエンチャント",
     "info.apothic_enchanting.ench_at": "%sレベルエンチャント",
     "info.apothic_enchanting.xp_cost": "純粋なXPコスト: %s (%sレベル)",
     "info.apothic_enchanting.power_range": "出力範囲: %sから%s",
     "info.apothic_enchanting.item_ench": "アイテムのエンチャント適性: %s",
     "info.apothic_enchanting.num_clues": "エンチャントのヒント: %s",
-    "info.apothic_enchanting.infusion_failed": "注入の条件を満たしていません",
+    "info.apothic_enchanting.infusion_failed": "注入の条件を満たしていない",
     "info.apothic_enchanting.anvil_at": "%sレベルの鍛造",
     "info.apothic_enchanting.anvil_xp_cost": "純粋なXPコスト: %s",
     
