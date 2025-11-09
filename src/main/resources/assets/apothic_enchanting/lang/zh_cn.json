@@ -154,6 +154,18 @@
     "item.apothic_enchanting.occult_ender_lead": "魔法末影拴绳",
     "item.apothic_enchanting.occult_ender_lead.desc": "可以捕捉和移动大多数实体，并将它们绑定至刷怪笼",
 
+    "item.apothic_enchanting.music_disc_eterna": "音乐唱片",
+    "jukebox_song.apothic_enchanting.eterna": "Firel - Eterna",
+    "subtitle.apothic_enchanting.music_disc.eterna": "Firel - Eterna",
+
+    "item.apothic_enchanting.music_disc_quanta": "音乐唱片",
+    "jukebox_song.apothic_enchanting.quanta": "Firel - Quanta",
+    "subtitle.apothic_enchanting.music_disc.quanta": "Firel - Quanta",
+
+    "item.apothic_enchanting.music_disc_arcana": "音乐唱片",
+    "jukebox_song.apothic_enchanting.arcana": "Firel - Arcana",
+    "subtitle.apothic_enchanting.music_disc.arcana": "Firel - Arcana",
+
     "info.apothic_enchanting.tome_error": "错误的物品 - 对着空气右击可以使其转化为附魔书。",
     "info.apothic_enchanting.other_tome": "接受除了已有宝典外的杂项魔咒。",
     "info.apothic_enchanting.helmet_tome": "仅接受适用于头盔的魔咒。",
@@ -186,7 +198,7 @@
     "enchantment.apothic_enchanting.berserkers_fury": "狂战士之怒",
     "enchantment.apothic_enchanting.berserkers_fury.desc": "受到伤害后狂怒。[⌛ 0:45]",
 
-    "enchantment.apothic_enchanting.knowledge_of_the_ages": "阅历",
+    "enchantment.apothic_enchanting.knowledge_of_the_ages": "亘古智慧",
     "enchantment.apothic_enchanting.knowledge_of_the_ages.desc": "敌人的掉落物直接转化为经验。",
 
     "enchantment.apothic_enchanting.natures_blessing": "自然祝福",
@@ -210,7 +222,7 @@
     "enchantment.apothic_enchanting.growth_serum": "生长血清",
     "enchantment.apothic_enchanting.growth_serum.desc": "剪羊毛后，绵羊有50%概率立即长出羊毛。",
 
-    "enchantment.apothic_enchanting.boon_of_the_earth": "地球恩惠",
+    "enchantment.apothic_enchanting.boon_of_the_earth": "大地恩惠",
     "enchantment.apothic_enchanting.boon_of_the_earth.desc": "挖掘石头时有概率获得矿石。",
 
     "enchantment.apothic_enchanting.chainsaw": "链锯",
@@ -353,7 +365,7 @@
     "advancements.apothic_enchanting.max_stable.desc": "在位阶和阿卡那都达到最大值，但量子化为0%的情况下附魔一个物品。",
 
     "advancements.apothic_enchanting.max_rectified": "精益求精",
-    "advancements.apothic_enchanting.max_rectified.desc": "在每种属性和量子稳定都达到最大值的情况下附魔一个物品。",
+    "advancements.apothic_enchanting.max_rectified.desc": "在每种属性都达到最大值且拥有量子稳定的情况下附魔一个物品。",
 
     "config.jade.plugin_apothic_enchanting.ench": "神化附魔",
 
