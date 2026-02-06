@@ -1,5 +1,6 @@
 package dev.shadowsoffire.apothic_enchanting.mixin;
 
+import net.minecraft.core.component.DataComponentType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,8 +22,8 @@ public class ItemMixin implements EnchantableItem {
         return 1;
     }
 
-    @Redirect(method = "isEnchantable(Lnet/minecraft/world/item/ItemStack;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;isDamageable(Lnet/minecraft/world/item/ItemStack;)Z", remap = false))
-    private boolean apoth_ignoreDamageForEnchantable(Item ths, ItemStack stack) {
+    @Redirect(method = "isEnchantable(Lnet/minecraft/world/item/ItemStack;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;has(Lnet/minecraft/core/component/DataComponentType;)Z", remap = false))
+    private boolean apoth_ignoreDamageForEnchantable(ItemStack instance, DataComponentType<?> dataComponentType) {
         return true;
     }
 
