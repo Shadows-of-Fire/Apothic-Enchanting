@@ -145,7 +145,7 @@
     "item.apothic_enchanting.scrap_tome": "Tomo da Desmontagem",
     "item.apothic_enchanting.improved_scrap_tome": "Tomo da Desmontagem Superior",
     "item.apothic_enchanting.extraction_tome": "Tomo de Extração",
-    "item.apothic_enchanting.warden_tendril": "Gavinha de Warden",
+    "item.apothic_enchanting.warden_tendril": "Gavinha de Defensor",
     "item.apothic_enchanting.infused_breath": "Bafo de Dragão Imbuído",
     "item.apothic_enchanting.flimsy_ender_lead": "Laço de Ender Frágil",
     "item.apothic_enchanting.flimsy_ender_lead.desc": "Pode capturar e mover animais",
@@ -305,7 +305,7 @@
     "advancements.apothic_enchanting.deepshelf.desc": "Ative uma Estante das Profundezas Adormecida.",
     
     "advancements.apothic_enchanting.sculkshelf": "Abraçando o Sculk",
-    "advancements.apothic_enchanting.sculkshelf.desc": "Fabrique uma Estante de Sculk usando uma Gavinha de Warden.",
+    "advancements.apothic_enchanting.sculkshelf.desc": "Fabrique uma Estante de Sculk usando uma Gavinha de Defensor.",
     
     "advancements.apothic_enchanting.endshelf": "Encantador Matador de Dragões",
     "advancements.apothic_enchanting.endshelf.desc": "Adquira Bafo de Dragão Imbuído e fabrique uma Estante do End.",
