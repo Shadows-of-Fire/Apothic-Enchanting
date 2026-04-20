@@ -293,7 +293,7 @@
     "advancements.apothic_enchanting.100ench.desc": "Encante um item no nível 100.",
     
     "advancements.apothic_enchanting.bookshelf": "Bibliotecário Local",
-    "advancements.apothic_enchanting.bookshelf.desc": "Crie uma estante de livros.",
+    "advancements.apothic_enchanting.bookshelf.desc": "Fabrique uma estante de livros.",
     
     "advancements.apothic_enchanting.hellshelf": "O Caos do Inferno",
     "advancements.apothic_enchanting.hellshelf.desc": "Obtenha uma Estante Infernal.",
@@ -305,13 +305,13 @@
     "advancements.apothic_enchanting.deepshelf.desc": "Ative uma Estante das Profundezas Adormecida.",
     
     "advancements.apothic_enchanting.sculkshelf": "Abraçando o Sculk",
-    "advancements.apothic_enchanting.sculkshelf.desc": "Crie uma Estante de Sculk usando uma Gavinha de Warden.",
+    "advancements.apothic_enchanting.sculkshelf.desc": "Fabrique uma Estante de Sculk usando uma Gavinha de Warden.",
     
     "advancements.apothic_enchanting.endshelf": "Encantador Matador de Dragões",
-    "advancements.apothic_enchanting.endshelf.desc": "Adquira Bafo de Dragão Imbuído e crie uma Estante do Fim.",
+    "advancements.apothic_enchanting.endshelf.desc": "Adquira Bafo de Dragão Imbuído e fabrique uma Estante do End.",
     
-    "advancements.apothic_enchanting.upgrade_endshelf": "A Estante Final",
-    "advancements.apothic_enchanting.upgrade_endshelf.desc": "Aprimore uma Estante do Fim para uma Estante do Fim Dracônica.",
+    "advancements.apothic_enchanting.upgrade_endshelf": "A Estante final",
+    "advancements.apothic_enchanting.upgrade_endshelf.desc": "Aprimore uma Estante do End para uma Estante do End Dracônica.",
     
     "advancements.apothic_enchanting.seashelf": "A Pureza dos Mares",
     "advancements.apothic_enchanting.seashelf.desc": "Obtenha uma Estante Marinha",
@@ -329,7 +329,7 @@
     "advancements.apothic_enchanting.shieldench.desc": "Encante um escudo",
 
     "advancements.apothic_enchanting.altar": "Transformação Oceânica",
-    "advancements.apothic_enchanting.altar.desc": "Crie um Altar dos Mares, que pode transformar itens encantados indesejados em um novo livro.",
+    "advancements.apothic_enchanting.altar.desc": "Fabrique um Altar dos Mares, que pode transformar itens encantados indesejados em um novo livro.",
 
     "advancements.apothic_enchanting.splitting": "Esmagador de Encantamentos",
     "advancements.apothic_enchanting.splitting.desc": "Solte com sucesso uma bigorna encantada com Divisão em um livro encantado para dividi-lo",
