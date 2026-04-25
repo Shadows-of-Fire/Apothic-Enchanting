@@ -83,7 +83,7 @@ public class ApothEnchantmentProvider {
                     items.getOrThrow(ItemTags.AXES),
                     1, // weight
                     1, // max level
-                    Enchantment.constantCost(55),
+                    Enchantment.constantCost(40),
                     Enchantment.constantCost(200),
                     10, // anvil cost
                     EquipmentSlotGroup.MAINHAND))
