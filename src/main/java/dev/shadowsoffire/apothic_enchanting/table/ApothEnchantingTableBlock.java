@@ -59,6 +59,11 @@ public class ApothEnchantingTableBlock extends EnchantingTableBlock {
         }
     }
 
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new ApothEnchantingTableBlockEntity(pos, state);
+    }
+
     public static IItemHandler getItemHandler(EnchantingTableBlockEntity be, Direction dir) {
         return be.getData(EnchantmentTableItemHandler.TYPE);
     }
