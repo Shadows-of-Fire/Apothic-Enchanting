@@ -1,6 +1,9 @@
 {
     "creative_tab.apothic_enchanting.all": "神化附魔",
 
+    "apothic_enchanting:max_eterna": "最大位阶",
+    "apothic_enchanting:max_eterna.desc": "你可以在附魔台中使用的最大位阶值。",
+
     "block.apothic_enchanting.hellshelf": "下界书架",
     "block.apothic_enchanting.infused_hellshelf": "灌注下界书架",
     "block.apothic_enchanting.blazing_hellshelf": "炽热下界书架",
@@ -24,6 +27,7 @@
     "block.apothic_enchanting.pearl_endshelf": "璀璨末地书架",
     "block.apothic_enchanting.draconic_endshelf": "巨龙末地书架",
 
+    "block.apothic_enchanting.basic_bookshelf": "基础书架",
     "block.apothic_enchanting.beeshelf": "蜂蜜书架",
     "block.apothic_enchanting.melonshelf": "西瓜书架",
     "block.apothic_enchanting.stoneshelf": "石头书架",
@@ -37,6 +41,11 @@
 
     "block.apothic_enchanting.library": "魔咒图书馆",
     "block.apothic_enchanting.ender_library": "亚历山大图书馆",
+
+    "block.apothic_enchanting.apothic_enchanting_table": "神化附魔台",
+    "block.apothic_enchanting.apothic_enchanting_table.desc": "附魔台的一种装饰变体。",
+    "block.apothic_enchanting.raven_enchanting_table": "渡鸦附魔台",
+    "block.apothic_enchanting.raven_enchanting_table.desc": "允许手动自定义核心附魔属性。",
 
     "info.apothic_enchanting.ench_power": "提供%s附魔威力。",
     "info.apothic_enchanting.masterwork": "极品",
@@ -66,6 +75,7 @@
     "gui.apothic_enchanting.enchant.eterna.desc": " - 魔法能量",
     "gui.apothic_enchanting.enchant.eterna.desc2": "决定可用魔咒等级。",
     "gui.apothic_enchanting.enchant.eterna.desc3": "当前值：%s/%s",
+    "gui.apothic_enchanting.enchant.eterna.desc4": "根据你的最大位阶属性，被限制为%s",
     "gui.apothic_enchanting.enchant.quanta.desc": " - 原初的混沌",
     "gui.apothic_enchanting.enchant.quanta.desc2": "调节威力范围，",
     "gui.apothic_enchanting.enchant.quanta.desc3": "减少负面效果。",
@@ -491,5 +501,8 @@
     "enchantment.level.124": "CXXIV",
     "enchantment.level.125": "CXXV",
     "enchantment.level.126": "CXXVI",
-    "enchantment.level.127": "CXXVII"
+    "enchantment.level.127": "CXXVII",
+
+    "commands.apothic_enchanting.dump.success": "已转储%s条enchantment_info条目至%s",
+    "commands.apothic_enchanting.dump.failure": "转储enchantment_info失败：%s"
 }
