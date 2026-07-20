@@ -260,7 +260,7 @@
     "rarity.apothic_enchanting.common": "Обычная",
     "rarity.apothic_enchanting.uncommon": "Необычная",
     "rarity.apothic_enchanting.rare": "Редкая",
-    "rarity.apothic_enchanting.very_rare": "Очень редкая",
+    "rarity.apothic_enchanting.very_rare": "Редчайшая",
 
     "info.apothic_enchanting.weights": "Вес",
     "info.apothic_enchanting.all_available": "Показать все доступные чары",
@@ -360,7 +360,7 @@
     "rarity.enchantment.common": "Обычная",
     "rarity.enchantment.uncommon": "Необычная",
     "rarity.enchantment.rare": "Редкая",
-    "rarity.enchantment.very_rare": "Очень редкая",
+    "rarity.enchantment.very_rare": "Редчайшая",
 
     "enchantment.level.0": "0",
     "enchantment.level.11": "XI",
