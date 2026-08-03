@@ -1,7 +1,7 @@
 {
     "creative_tab.apothic_enchanting.all": "Encantamento Apótico",
 
-    "apothic_enchanting:max_eterna": "Eterna Máxima",
+    "apothic_enchanting:max_eterna": "Eterna máxima",
     "apothic_enchanting:max_eterna.desc": "A quantidade máxima de Eterna que pode ser usada em uma Mesa de Encantamentos.",
 
     "block.apothic_enchanting.hellshelf": "Estante Infernal",
@@ -55,14 +55,14 @@
     "gui.apothic_enchanting.enchant.eterna": "Eterna",
     "gui.apothic_enchanting.enchant.quanta": "Quanta",
     "gui.apothic_enchanting.enchant.arcana": "Arcana",
-    "gui.apothic_enchanting.enchant.stability": "Estabilidade Quântica",
+    "gui.apothic_enchanting.enchant.stability": "Estabilidade quântica",
     "info.apothic_enchanting.ench_stats": "Atributos de encantamento:",
     "info.apothic_enchanting.eterna": " - Eterna: %s",
     "info.apothic_enchanting.quanta": " - Quanta: %s%%",
     "info.apothic_enchanting.arcana": " - Arcana: %s%%",
     "info.apothic_enchanting.clues": " - Pistas de encantamento: %s",
     "info.apothic_enchanting.allows_treasure": " - Permite encantamentos de tesouro",
-    "info.apothic_enchanting.provides_stability": " - Fornece Estabilidade Quântica",
+    "info.apothic_enchanting.provides_stability": " - Fornece Estabilidade quântica",
     "info.apothic_enchanting.filter": "Filtro de encantamentos:",
     "info.apothic_enchanting.eterna.p": " - Eterna: +%s (Máx. %s)",
     "info.apothic_enchanting.quanta.p": " - Quanta: +%s%%",
@@ -75,7 +75,7 @@
     "gui.apothic_enchanting.enchant.eterna.desc": " - Energia mágica",
     "gui.apothic_enchanting.enchant.eterna.desc2": "Define o nível máximo de encantamento",
     "gui.apothic_enchanting.enchant.eterna.desc3": "Valor atual: %s/%s",
-    "gui.apothic_enchanting.enchant.eterna.desc4": "Limitado a %s pelo atributo Eterna Máxima",
+    "gui.apothic_enchanting.enchant.eterna.desc4": "Limitado a %s pelo atributo Eterna máxima",
     "gui.apothic_enchanting.enchant.quanta.desc": " - Caos puro",
     "gui.apothic_enchanting.enchant.quanta.desc2": "Aumenta a aleatoriedade dos resultados",
     "gui.apothic_enchanting.enchant.quanta.desc3": " diminui os efeitos negativos",
@@ -375,7 +375,7 @@
     "advancements.apothic_enchanting.max_stable.desc": "Encante um item com Eterna e Arcana no máximo, mas 0% de Quanta",
 
     "advancements.apothic_enchanting.max_rectified": "Apenas o melhor",
-    "advancements.apothic_enchanting.max_rectified.desc": "Encante um item com todos os atributos no máximo e Estabilidade Quântica",
+    "advancements.apothic_enchanting.max_rectified.desc": "Encante um item com todos os atributos no máximo e Estabilidade quântica",
 
     "config.jade.plugin_apothic_enchanting.ench": "Apotheosis: Módulo de Encantamento",
 
