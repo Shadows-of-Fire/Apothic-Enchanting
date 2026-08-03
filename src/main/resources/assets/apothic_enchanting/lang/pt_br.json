@@ -375,7 +375,7 @@
     "advancements.apothic_enchanting.max_stable.desc": "Encante um item com Eterna e Arcana no máximo, mas 0% de Quanta",
 
     "advancements.apothic_enchanting.max_rectified": "Apenas o melhor",
-    "advancements.apothic_enchanting.max_rectified.desc": "Encante um item com todos os atributos no máximo e Estabilidade quântica",
+    "advancements.apothic_enchanting.max_rectified.desc": "Encante um item com todos os atributos e a Estabilidade quântica no máximo",
 
     "config.jade.plugin_apothic_enchanting.ench": "Apotheosis: Módulo de Encantamento",
 
