@@ -295,9 +295,7 @@ public class ApothEnchantmentScreen extends EnchantmentScreen implements DrawsOn
             list.add(TooltipUtil.lang("gui", "enchant.arcana.desc3").withStyle(ChatFormatting.GRAY));
             if (this.menu.stats.arcana() > 0) {
                 list.add(Component.literal(""));
-                float ench = this.menu.getSlot(0).getItem().getOrDefault(DataComponents.ENCHANTABLE, new Enchantable(1)).value() / 2F;
-                list.add(TooltipUtil.lang("gui", "enchant.arcana.desc4", f(this.menu.stats.arcana() - ench)).withStyle(ChatFormatting.GRAY));
-                list.add(TooltipUtil.lang("info", "ench_bonus", f(ench)).withStyle(ChatFormatting.YELLOW));
+                list.add(TooltipUtil.lang("gui", "enchant.arcana.desc4", f(this.menu.stats.arcana())).withStyle(ChatFormatting.GRAY));
                 list.add(TooltipUtil.lang("gui", "enchant.arcana.desc5", f(this.menu.stats.arcana())).withStyle(ChatFormatting.GOLD));
             }
             gfx.setComponentTooltipForNextFrame(this.font, list, mouseX, mouseY);
