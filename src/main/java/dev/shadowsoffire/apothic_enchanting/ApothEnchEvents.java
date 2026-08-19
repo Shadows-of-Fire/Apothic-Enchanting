@@ -255,7 +255,9 @@ public class ApothEnchEvents {
         if (fervor != null) {
             if (stack.getDestroySpeed(e.getState()) > 1.0F) {
                 float hardness = e.getState().getDestroySpeed(p.level(), e.getPosition().orElse(BlockPos.ZERO));
-                e.setNewSpeed(Math.min(29.9999F, fervor.getFirst().calculate(fervor.getSecond())) * hardness);
+                if (hardness > 0) {
+                    e.setNewSpeed(Math.min(29.9999F, fervor.getFirst().calculate(fervor.getSecond())) * hardness);
+                }
             }
         }
     }
