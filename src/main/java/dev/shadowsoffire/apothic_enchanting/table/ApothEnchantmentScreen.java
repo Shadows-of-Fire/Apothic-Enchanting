@@ -46,6 +46,7 @@ import net.minecraft.world.inventory.EnchantmentMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
+import net.neoforged.fml.ModList;
 
 public class ApothEnchantmentScreen extends EnchantmentScreen implements DrawsOnLeft {
 
@@ -303,7 +304,13 @@ public class ApothEnchantmentScreen extends EnchantmentScreen implements DrawsOn
                 list.add(TooltipUtil.lang("gui", "enchant.eterna.desc3", f(this.menu.stats.tableEterna()), 100).withStyle(ChatFormatting.GRAY));
                 float playerMax = (float) Minecraft.getInstance().player.getAttributeValue(Ench.Attributes.MAX_ETERNA);
                 if (playerMax < 100) {
-                    list.add(TooltipUtil.lang("gui", "enchant.eterna.desc4", f(playerMax)).withStyle(ChatFormatting.RED));
+                    String key = "enchant.eterna.limited";
+                    if (ModList.get().isLoaded("apotheosis")) {
+                        // Presume that if Apoth is in here, the tier augments are active, and they are controlling the attribute.
+                        // Pack authors can just mess with the lang keys if they change behavior.
+                        key += ".world_tier";
+                    }
+                    list.add(TooltipUtil.lang("gui", key, f(playerMax)).withStyle(ChatFormatting.RED));
                 }
             }
             gfx.renderComponentTooltip(this.font, list, mouseX, mouseY);
