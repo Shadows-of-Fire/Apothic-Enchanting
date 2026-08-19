@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import javax.annotation.Nullable;
+
 import dev.shadowsoffire.apothic_enchanting.Ench;
 import dev.shadowsoffire.apothic_enchanting.payloads.CluePayload;
 import dev.shadowsoffire.apothic_enchanting.payloads.StatsPayload;
 import dev.shadowsoffire.apothic_enchanting.table.infusion.InfusionRecipe;
-import javax.annotation.Nullable;
-
 import dev.shadowsoffire.apothic_enchanting.util.MiscUtil;
 import dev.shadowsoffire.placebo.util.EnchantmentUtils;
 import net.minecraft.Util;
@@ -245,7 +245,7 @@ public class ApothEnchantmentMenu extends EnchantmentMenu {
 
     public void gatherStats() {
         this.access.evaluate((world, pos) -> {
-            this.stats = EnchantmentTableStats.gatherStats(world, pos, this.getSlot(0).getItem().getEnchantmentValue());
+            this.stats = EnchantmentTableStats.gatherStats(world, pos);
             PacketDistributor.sendToPlayer((ServerPlayer) this.player, new StatsPayload(this.stats));
             return this;
         }).orElse(this);

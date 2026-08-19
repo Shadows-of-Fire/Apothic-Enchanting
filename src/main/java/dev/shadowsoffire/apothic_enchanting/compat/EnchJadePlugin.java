@@ -67,7 +67,7 @@ public class EnchJadePlugin implements IWailaPlugin, IBlockComponentProvider {
         if (accessor.getBlock() instanceof EnchantingTableBlock) {
             if (accessor.getBlock() == Ench.Blocks.RAVEN_ENCHANTING_TABLE.value()) {
                 RavenTableStats raven = RavenStatsDataProvider.INSTANCE.decodeFromData(accessor).orElseGet(RavenTableStats::new);
-                EnchantmentTableStats shelfStats = EnchantmentTableStats.gatherStats(accessor.getLevel(), accessor.getPosition(), 0);
+                EnchantmentTableStats shelfStats = EnchantmentTableStats.gatherStats(accessor.getLevel(), accessor.getPosition());
                 EnchantmentTableStats merged = new EnchantmentTableStats(
                     raven.eterna(), raven.quanta(), raven.arcana(),
                     shelfStats.clues(), shelfStats.blacklist(), shelfStats.treasure(), shelfStats.stable());

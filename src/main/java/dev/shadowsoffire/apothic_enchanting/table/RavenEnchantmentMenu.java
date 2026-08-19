@@ -45,8 +45,7 @@ public class RavenEnchantmentMenu extends ApothEnchantmentMenu {
     @Override
     public void gatherStats() {
         this.access.execute((world, pos) -> {
-            int itemEnch = this.getSlot(0).getItem().getEnchantmentValue();
-            EnchantmentTableStats blockStats = EnchantmentTableStats.gatherStats(world, pos, itemEnch);
+            EnchantmentTableStats blockStats = EnchantmentTableStats.gatherStats(world, pos);
             this.stats = new EnchantmentTableStats(
                 this.ravenStats.eterna(),
                 this.ravenStats.quanta(),
