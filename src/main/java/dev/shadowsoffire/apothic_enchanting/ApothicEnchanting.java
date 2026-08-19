@@ -42,7 +42,6 @@ import dev.shadowsoffire.placebo.tabs.TabFillingRegistry;
 import dev.shadowsoffire.placebo.util.PlaceboUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.dispenser.ShearsDispenseItemBehavior;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataProvider;
 import net.minecraft.network.chat.Component;
@@ -56,7 +55,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantable;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
-import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
@@ -113,8 +111,6 @@ public class ApothicEnchanting {
         NeoForge.EVENT_BUS.register(new ApothEnchEvents());
         NeoForge.EVENT_BUS.addListener(this::reload);
         e.enqueueWork(() -> {
-            DispenserBlock.registerBehavior(Items.SHEARS, new ShearsDispenseItemBehavior());
-
             TabFillingRegistry.register(Ench.Tabs.ENCH.getKey(), Ench.Items.APOTHIC_ENCHANTING_TABLE, Ench.Items.RAVEN_ENCHANTING_TABLE);
 
             TabFillingRegistry.register(Ench.Tabs.ENCH.getKey(), Ench.Items.BASIC_BOOKSHELF, Ench.Items.HELLSHELF, Ench.Items.INFUSED_HELLSHELF, Ench.Items.BLAZING_HELLSHELF, Ench.Items.GLOWING_HELLSHELF, Ench.Items.SEASHELF,
@@ -143,27 +139,17 @@ public class ApothicEnchanting {
         PayloadHelper.registerPayload(new SetRavenStatsPayload.Provider());
     }
 
+    // Make shears "reasonably" enchantable.
     @SubscribeEvent
     public void modifyComponents(ModifyDefaultComponentsEvent e) {
-        // Shears previously had an Efficiency/Fortune/Unbreaking-enabled mixin and a custom
-        // getEnchantmentValue() override; both methods were removed in 26.1. Drive the same
-        // enchantability via the DataComponents.ENCHANTABLE data component (the supported-enchant
-        // set is extended via the #minecraft:enchantable/{mining,durability} datapack tags).
-        e.modify(Items.SHEARS, builder -> builder.set(DataComponents.ENCHANTABLE, new Enchantable(15)));
+        e.modify(Items.SHEARS, (builder, regs, item) -> builder.set(DataComponents.ENCHANTABLE, new Enchantable(15)));
     }
 
-    /**
-     * Fallback handler that stamps a minimal {@link Enchantable}{@code (1)} component onto every
-     * item that doesn't already have one. Runs at {@link EventPriority#LOWEST} so every other
-     * mod's explicit {@code modify(...)} call from {@link #modifyComponents(ModifyDefaultComponentsEvent)}
-     * (and every other mod's own handlers) has already landed before we inspect the default component
-     * map. This preserves the old {@code ItemMixin#getEnchantmentValue} overwrite's intent: any item
-     * is at least minimally enchantable unless explicitly overridden.
-     */
+    // Make everything that isn't explicitly not enchantable enchantable and let enchantments manage this concept.
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void defaultEnchantability(ModifyDefaultComponentsEvent e) {
         e.modifyMatching((item, components) -> !components.has(DataComponents.ENCHANTABLE),
-            builder -> builder.set(DataComponents.ENCHANTABLE, new Enchantable(1)));
+            (builder, regs, item) -> builder.set(DataComponents.ENCHANTABLE, new Enchantable(1)));
     }
 
     @SubscribeEvent
