@@ -107,6 +107,17 @@ public class ApothEnchantmentHelper {
             }
         }
 
+        // Item enchantability is treated as an element-wise % chance to increase enchantment levels by one.
+        // Diminishing returns start at 80% via some natural logic magic formula. Guaranteed at ~385.
+        float chance = Math.min(0.80F, enchantability / 100F);
+        chance += Math.clamp(3.5 * Math.log(enchantability - 80) / 100F, 0, 0.20F);
+        for (int i = 0; i < chosenEnchants.size(); i++) {
+            EnchantmentInstance inst = chosenEnchants.get(i);
+            if (rand.nextFloat() >= chance) {
+                chosenEnchants.set(i, new EnchantmentInstance(inst.enchantment(), inst.level() + 1));
+            }
+        }
+
         if (stack.getItem() instanceof EnchantableItem ei) {
             return ei.selectEnchantments(chosenEnchants, rand, stack, level, stats);
         }

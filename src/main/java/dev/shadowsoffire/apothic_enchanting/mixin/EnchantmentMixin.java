@@ -5,6 +5,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import dev.shadowsoffire.apothic_enchanting.ApothicEnchanting;
 import dev.shadowsoffire.apothic_enchanting.util.TooltipUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -19,6 +20,11 @@ public class EnchantmentMixin {
     @Inject(method = "getFullname", at = @At("RETURN"), cancellable = true, require = 1)
     private static void apoth_modifyEnchColorForAboveMaxLevel(Holder<Enchantment> ench, int level, CallbackInfoReturnable<Component> cir) {
         TooltipUtil.applyOverMaxLevelColor(ench, level, cir.getReturnValue());
+        // A star prefix is shown to indicate that an Enchantment is above the Apoth configured max value.
+        if (level > ApothicEnchanting.getEnchInfo(ench).getMaxLevel(ench)) {
+            Component star = ApothicEnchanting.lang("text", "star_prefix", cir.getReturnValue()).withStyle(cir.getReturnValue().getStyle());
+            cir.setReturnValue(star);
+        }
     }
 
 }

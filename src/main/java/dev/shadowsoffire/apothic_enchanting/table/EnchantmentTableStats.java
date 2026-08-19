@@ -91,8 +91,8 @@ public record EnchantmentTableStats(float eterna, float quanta, float arcana, in
      * @param itemEnch The enchantability of the item being enchanted.
      * @return The computed {@link EnchantmentTableStats}.
      */
-    public static EnchantmentTableStats gatherStats(LevelReader level, BlockPos pos, int itemEnch) {
-        EnchantmentTableStats.Builder builder = new EnchantmentTableStats.Builder(itemEnch);
+    public static EnchantmentTableStats gatherStats(LevelReader level, BlockPos pos) {
+        EnchantmentTableStats.Builder builder = new EnchantmentTableStats.Builder();
         for (BlockPos offset : EnchantingTableBlock.BOOKSHELF_OFFSETS) {
             if (canReadStatsFrom(level, pos, offset)) {
                 gatherStats(builder, level, pos.offset(offset));
@@ -158,9 +158,8 @@ public record EnchantmentTableStats(float eterna, float quanta, float arcana, in
         private boolean allowsTreasure = false;
         private boolean stable = false;
 
-        public Builder(int itemEnch) {
+        public Builder() {
             this.addQuanta(15F);
-            this.addArcana(itemEnch / 2F);
             this.addClues(1);
         }
 

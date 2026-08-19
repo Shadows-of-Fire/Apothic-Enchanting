@@ -3,7 +3,6 @@ package dev.shadowsoffire.apothic_enchanting.table;
 import dev.shadowsoffire.apothic_enchanting.Ench;
 import dev.shadowsoffire.apothic_enchanting.payloads.StatsPayload;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
@@ -11,7 +10,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.item.enchantment.Enchantable;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 public class RavenEnchantmentMenu extends ApothEnchantmentMenu {
@@ -49,8 +47,7 @@ public class RavenEnchantmentMenu extends ApothEnchantmentMenu {
     @Override
     public void gatherStats() {
         this.access.execute((world, pos) -> {
-            int itemEnch = this.getSlot(0).getItem().getOrDefault(DataComponents.ENCHANTABLE, new Enchantable(1)).value();
-            EnchantmentTableStats blockStats = EnchantmentTableStats.gatherStats(world, pos, itemEnch);
+            EnchantmentTableStats blockStats = EnchantmentTableStats.gatherStats(world, pos);
             this.stats = new EnchantmentTableStats(
                 this.ravenStats.eterna(),
                 this.ravenStats.quanta(),

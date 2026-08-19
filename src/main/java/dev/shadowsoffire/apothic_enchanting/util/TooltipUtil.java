@@ -85,7 +85,7 @@ public class TooltipUtil {
     }
 
     public static void appendTableStats(LevelReader level, BlockPos pos, Consumer<Component> tooltip) {
-        appendTableStats(EnchantmentTableStats.gatherStats(level, pos, 0), tooltip);
+        appendTableStats(EnchantmentTableStats.gatherStats(level, pos), tooltip);
     }
 
     public static void appendTableStats(EnchantmentTableStats stats, Consumer<Component> tooltip) {

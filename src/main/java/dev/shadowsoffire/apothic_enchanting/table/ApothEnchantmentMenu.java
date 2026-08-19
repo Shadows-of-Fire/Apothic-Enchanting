@@ -12,7 +12,6 @@ import dev.shadowsoffire.apothic_enchanting.util.MiscUtil;
 import dev.shadowsoffire.placebo.util.EnchantmentUtils;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
@@ -29,7 +28,6 @@ import net.minecraft.world.inventory.EnchantmentMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.Enchantable;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
@@ -243,7 +241,7 @@ public class ApothEnchantmentMenu extends EnchantmentMenu {
 
     public void gatherStats() {
         this.access.evaluate((world, pos) -> {
-            this.stats = EnchantmentTableStats.gatherStats(world, pos, this.getSlot(0).getItem().getOrDefault(DataComponents.ENCHANTABLE, new Enchantable(1)).value());
+            this.stats = EnchantmentTableStats.gatherStats(world, pos);
             PacketDistributor.sendToPlayer((ServerPlayer) this.player, new StatsPayload(this.stats));
             return this;
         }).orElse(this);

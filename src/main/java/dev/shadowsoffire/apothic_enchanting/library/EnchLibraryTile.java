@@ -9,7 +9,6 @@ import java.util.Set;
 import com.mojang.serialization.Codec;
 
 import dev.shadowsoffire.apothic_enchanting.ApothicEnchanting;
-import dev.shadowsoffire.apothic_enchanting.EnchantmentInfo;
 import dev.shadowsoffire.apothic_enchanting.Ench.Tiles;
 import dev.shadowsoffire.placebo.network.VanillaPacketDispatcher;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
