@@ -1,3 +1,13 @@
+## 1.6.1
+* Updated how Enchantability works. It no longer gives Arcana, and instead gives a % chance to boost an enchantment's level by 1 when enchanting.
+  * This can allow enchantments to go over the apoth configured max level.
+  * Enchantments that are over the configured max level are now marked with a star.
+* The enchanting table will now directly call out World Tiers as the source of max eterna limits if Apotheosis is installed.
+* Fixed a bug with Miner's Fervor and instabreak blocks like Sugarcane being unbreakable.
+* Removed a _very_ stale shears dispenser behavior override.
+* Quarkrus: Updated Russian translation.
+* t0piy & PrincessStellar: Updated Brazilian translation.
+
 ## 1.6.0
 * Backported the following changes from 2.0.0 (Minecraft 26.1.2)
   * Added the Apothic Enchanting Table, a cosmetic variant of the Enchanting Table.
