@@ -18,8 +18,10 @@ import net.minecraft.core.Holder;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.LevelReader;
@@ -115,7 +117,7 @@ public class TooltipUtil {
      * @param tooltip  The tooltip consumer.
      * @implNote This method is called from {@link ItemStackMixin#apoth_enchTooltipRewrite} and replaces vanilla handling of enchantment tooltips.
      */
-    public static void applyEnchTooltip(Holder<Enchantment> ench, ItemEnchantments nbt, ItemEnchantments gameplay, Consumer<Component> tooltip) {
+    public static void applyEnchTooltip(Holder<Enchantment> ench, ItemEnchantments nbt, ItemEnchantments gameplay, Consumer<Component> tooltip, TooltipFlag flag) {
         int nbtLevel = nbt.getLevel(ench);
         int realLevel = gameplay.getLevel(ench);
 
@@ -127,7 +129,7 @@ public class TooltipUtil {
         }
         else {
             // Show the change vs nbt level
-            appendModifiedEnchTooltip(tooltip, ench, realLevel, nbtLevel);
+            appendModifiedEnchTooltip(tooltip, ench, realLevel, nbtLevel, flag);
         }
 
         if ((realLevel > 0 || nbtLevel != realLevel) && FMLEnvironment.dist.isClient() && ApothEnchConfig.enableInlineEnchDescs) {
@@ -148,14 +150,14 @@ public class TooltipUtil {
      * @param realLevel The effective level for gameplay purposes.
      * @param nbtLevel  The NBT level.
      */
-    private static void appendModifiedEnchTooltip(Consumer<Component> tooltip, Holder<Enchantment> ench, int realLevel, int nbtLevel) {
+    private static void appendModifiedEnchTooltip(Consumer<Component> tooltip, Holder<Enchantment> ench, int realLevel, int nbtLevel, TooltipFlag flag) {
         MutableComponent mc = Enchantment.getFullname(ench, realLevel).copy();
-        mc.getSiblings().clear();
+        mc.getSiblings().removeIf(c -> c.getContents() instanceof TranslatableContents tc && tc.getKey().startsWith("enchantment.level"));
         Component nbtLevelComp = Component.translatable("enchantment.level." + nbtLevel);
         Component realLevelComp = Component.translatable("enchantment.level." + realLevel);
         if (realLevel != 1 || EnchHooks.getMaxLevel(ench.value()) != 1) {
             // Enchantments with a max level of 1 (and an effective level of 1) don't show the level in the tooltip.
-            mc.append(CommonComponents.SPACE).append(realLevelComp);
+            mc.append(realLevelComp);
         }
 
         int diff = realLevel - nbtLevel;

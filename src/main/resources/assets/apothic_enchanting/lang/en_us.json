@@ -384,7 +384,7 @@
     "rarity.enchantment.rare": "Rare",
     "rarity.enchantment.very_rare": "Very Rare",
 
-    "text.apothic_enchanting.star_prefix": "🌟 %s",
+    "text.apothic_enchanting.star_prefix": "🌟 ",
 
     "enchantment.level.0": "0",
     "enchantment.level.11": "XI",

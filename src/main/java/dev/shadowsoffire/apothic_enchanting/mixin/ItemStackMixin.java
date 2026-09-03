@@ -41,7 +41,7 @@ public class ItemStackMixin {
      */
     @SuppressWarnings("deprecation")
     @Inject(method = "addToTooltip", at = @At(value = "HEAD"), cancellable = true)
-    public <T extends TooltipProvider> void apoth_enchTooltipRewrite(DataComponentType<T> component, Item.TooltipContext ctx, Consumer<Component> tooltip, TooltipFlag tooltipFlag, CallbackInfo ci) {
+    public <T extends TooltipProvider> void apoth_enchTooltipRewrite(DataComponentType<T> component, Item.TooltipContext ctx, Consumer<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
         ItemStack ths = (ItemStack) (Object) this;
         T t = ths.get(component);
         if (component == DataComponents.ENCHANTMENTS && t instanceof ItemEnchantments enchants) {
@@ -58,7 +58,7 @@ public class ItemStackMixin {
             // 2. Any other NBT enchantments not in the iteration order.
             // 3. Any other Gameplay enchantments not in either of the other two passes.
 
-            Consumer<Holder<Enchantment>> applyTooltip = ench -> TooltipUtil.applyEnchTooltip(ench, enchants, realLevels, tooltip);
+            Consumer<Holder<Enchantment>> applyTooltip = ench -> TooltipUtil.applyEnchTooltip(ench, enchants, realLevels, tooltip, flag);
 
             iterationOrder.forEach(applyTooltip);
 
