@@ -1,3 +1,7 @@
+## 1.6.2
+* Fixed an issue that caused star-prefixed enchantments to display the level twice.
+* Satherov: Added a JEI transfer handler for infusion recipes in the Enchanting Table of the Raven.
+
 ## 1.6.1
 * Updated how Enchantability works. It no longer gives Arcana, and instead gives a % chance to boost an enchantment's level by 1 when enchanting.
   * This can allow enchantments to go over the apoth configured max level.
