@@ -65,12 +65,15 @@ public class RavenEnchantmentMenu extends ApothEnchantmentMenu {
      * the client.
      */
     public void setPlayerStats(int eterna, int quanta, int arcana) {
+        this.setRavenStats(eterna, quanta, arcana);
+        this.slotsChanged(this.enchantSlots);
+    }
+
+    public void setRavenStats(int eterna, int quanta, int arcana) {
         int maxEterna = (int) this.player.getAttributeValue(Ench.Attributes.MAX_ETERNA);
         this.ravenStats.set(
             Mth.clamp(eterna, 0, maxEterna),
             Mth.clamp(quanta, 0, 100),
             Mth.clamp(arcana, 0, 100));
-        this.slotsChanged(this.enchantSlots);
     }
-
 }
