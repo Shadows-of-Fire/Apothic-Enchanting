@@ -53,10 +53,7 @@ public class RavenEnchantmentScreen extends ApothEnchantmentScreen {
     public RavenEnchantmentScreen(EnchantmentMenu container, Inventory inv, Component title) {
         super(container, inv, title);
         this.ravenMenu = (RavenEnchantmentMenu) container;
-        RavenTableStats ravenStats = this.ravenMenu.getRavenStats();
-        this.currentEterna = Math.min(ravenStats.eterna(), this.eternaMax());
-        this.currentQuanta = ravenStats.quanta();
-        this.currentArcana = ravenStats.arcana();
+        this.readMenuStats();
     }
 
     @Override
@@ -75,6 +72,9 @@ public class RavenEnchantmentScreen extends ApothEnchantmentScreen {
         if (this.dirty) {
             this.sendStats();
             this.dirty = false;
+        }
+        else {
+            this.readMenuStats();
         }
     }
 
@@ -211,6 +211,14 @@ public class RavenEnchantmentScreen extends ApothEnchantmentScreen {
 
     private void sendStats() {
         ClientPacketDistributor.sendToServer(new SetRavenStatsPayload(this.currentEterna, this.currentQuanta, this.currentArcana));
+        this.ravenMenu.setRavenStats(this.currentEterna, this.currentQuanta, this.currentArcana);
+    }
+
+    private void readMenuStats() {
+        RavenTableStats ravenStats = this.ravenMenu.getRavenStats();
+        this.currentEterna = Math.min(ravenStats.eterna(), this.eternaMax());
+        this.currentQuanta = ravenStats.quanta();
+        this.currentArcana = ravenStats.arcana();
     }
 
     private static enum DraggedStat {

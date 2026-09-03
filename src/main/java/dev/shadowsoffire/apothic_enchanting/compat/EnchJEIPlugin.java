@@ -17,6 +17,8 @@ import mezz.jei.api.recipe.vanilla.IVanillaRecipeFactory;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
+import mezz.jei.api.registration.IRecipeTransferRegistration;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -78,6 +80,14 @@ public class EnchJEIPlugin implements IModPlugin {
             .sorted((r1, r2) -> Float.compare(r1.getRequirements().eterna(), r2.getRequirements().eterna()))
             .toList();
         reg.addRecipes(InfusionRecipeCategory.TYPE, recipes);
+    }
+    
+    @Override
+    public void registerRecipeTransferHandlers(IRecipeTransferRegistration reg) {
+        reg.addRecipeTransferHandler(
+            new RavenTransferHandler(reg.getTransferHelper()),
+            InfusionRecipeCategory.TYPE
+        );
     }
 
     @Override
