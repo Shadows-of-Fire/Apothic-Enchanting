@@ -1,6 +1,14 @@
 {
     "creative_tab.apothic_enchanting.all": "神化附魔",
 
+    "apothic_enchanting:max_eterna": "最大位阶",
+    "apothic_enchanting:max_eterna.desc": "你可以在附魔台中使用的最大位阶值。",
+
+    "block.apothic_enchanting.apothic_enchanting_table": "神化附魔台",
+    "block.apothic_enchanting.apothic_enchanting_table.desc": "附魔台的一种装饰变体。",
+    "block.apothic_enchanting.raven_enchanting_table": "渡鸦附魔台",
+    "block.apothic_enchanting.raven_enchanting_table.desc": "允许手动自定义核心附魔属性。",
+    "block.apothic_enchanting.basic_bookshelf": "基础书架",
     "block.apothic_enchanting.hellshelf": "下界书架",
     "block.apothic_enchanting.infused_hellshelf": "灌注下界书架",
     "block.apothic_enchanting.blazing_hellshelf": "炽热下界书架",
@@ -42,7 +50,7 @@
     "info.apothic_enchanting.masterwork": "极品",
     "info.apothic_enchanting.twisted": "扭曲",
     "info.apothic_enchanting.corrupted": "腐化",
-    "info.apothic_enchanting.enchanting": "附魔台的最大附魔等级可以超过30级。部分魔咒只会出现在30级之后。",
+    "info.apothic_enchanting.enchanting": "附魔台的最大附魔等级可超过30级，部分魔咒仅在30级后出现。",
     "gui.apothic_enchanting.enchant.eterna": "位阶",
     "gui.apothic_enchanting.enchant.quanta": "量子化",
     "gui.apothic_enchanting.enchant.arcana": "阿卡那",
@@ -66,6 +74,8 @@
     "gui.apothic_enchanting.enchant.eterna.desc": " - 魔法能量",
     "gui.apothic_enchanting.enchant.eterna.desc2": "决定可用魔咒等级。",
     "gui.apothic_enchanting.enchant.eterna.desc3": "当前值：%s/%s",
+    "gui.apothic_enchanting.enchant.eterna.limited": "受限于你的最大位阶属性，上限为%s",
+    "gui.apothic_enchanting.enchant.eterna.limited.world_tier": "受限于你的世界层级（CTRL+T），上限为%s",
     "gui.apothic_enchanting.enchant.quanta.desc": " - 原初的混沌",
     "gui.apothic_enchanting.enchant.quanta.desc2": "调节威力范围，",
     "gui.apothic_enchanting.enchant.quanta.desc3": "减少负面效果。",
@@ -373,6 +383,8 @@
     "rarity.enchantment.uncommon": "罕见",
     "rarity.enchantment.rare": "稀有",
     "rarity.enchantment.very_rare": "非常稀有",
+
+    "text.apothic_enchanting.star_prefix": "🌟 ",
 
     "enchantment.level.0": "0",
     "enchantment.level.11": "XI",
