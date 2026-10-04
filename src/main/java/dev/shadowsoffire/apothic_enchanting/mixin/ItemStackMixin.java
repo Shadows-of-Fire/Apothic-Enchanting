@@ -67,7 +67,7 @@ public class ItemStackMixin {
             realLevels = ths.getAllEnchantments(regs.lookupOrThrow(Registries.ENCHANTMENT));
         }
 
-        Consumer<Holder<Enchantment>> applyTooltip = ench -> TooltipUtil.applyEnchTooltip(ench, enchants, realLevels, tooltip);
+        Consumer<Holder<Enchantment>> applyTooltip = ench -> TooltipUtil.applyEnchTooltip(ench, enchants, realLevels, tooltip, tooltipFlag);
 
         iterationOrder.forEach(applyTooltip);
 
