@@ -1,3 +1,8 @@
+## 1.6.3
+* Fixed a bug with enchantability bonuses (random +1 enchantment boosts).
+* Fixed the Arcana thresholds being 0/33/66/99 instead of the documented 0/25/75.
+* mc-kaishixiaxue: Updated Chinese translation.
+
 ## 1.6.2
 * Fixed an issue that caused star-prefixed enchantments to display the level twice.
 * Satherov: Added a JEI transfer handler for infusion recipes in the Enchanting Table of the Raven.
