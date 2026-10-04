@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+import dev.shadowsoffire.apothic_enchanting.ApothicEnchanting;
 import dev.shadowsoffire.apothic_enchanting.Ench.Tiles;
 import dev.shadowsoffire.placebo.network.VanillaPacketDispatcher;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
@@ -59,7 +60,7 @@ public abstract class EnchLibraryTile extends BlockEntity {
             int newPoints = Math.min(this.maxPoints, this.points.getInt(e.getKey()) + levelToPoints(e.getIntValue()));
             if (newPoints < 0) newPoints = this.maxPoints;
             this.points.put(e.getKey(), newPoints);
-            this.maxLevels.put(e.getKey(), Math.min(this.maxLevel, Math.max(this.maxLevels.getInt(e.getKey()), e.getIntValue())));
+            this.maxLevels.put(e.getKey(), Math.min(this.getEnchantmentCap(e.getKey()), Math.max(this.maxLevels.getInt(e.getKey()), e.getIntValue())));
         }
 
         if (enchs.size() > 0) {
@@ -98,7 +99,7 @@ public abstract class EnchLibraryTile extends BlockEntity {
      * @return If this level of this enchantment can be extracted.
      */
     public boolean canExtract(Holder<Enchantment> ench, int level, int currentLevel) {
-        return this.maxLevels.getInt(ench) >= level && this.points.getInt(ench) >= levelToPoints(level) - levelToPoints(currentLevel);
+        return this.getMax(ench) >= level && this.points.getInt(ench) >= levelToPoints(level) - levelToPoints(currentLevel);
     }
 
     /**
@@ -195,7 +196,11 @@ public abstract class EnchLibraryTile extends BlockEntity {
     }
 
     public int getMax(Holder<Enchantment> ench) {
-        return Math.min(this.maxLevel, this.maxLevels.getInt(ench));
+        return Math.min(this.getEnchantmentCap(ench), this.maxLevels.getInt(ench));
+    }
+
+    public int getEnchantmentCap(Holder<Enchantment> ench) {
+        return Math.min(this.maxLevel, ApothicEnchanting.getEnchInfo(ench).getMaxLevel());
     }
 
     public IItemHandler getItemHandler(Direction dir) {
