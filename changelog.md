@@ -1,3 +1,18 @@
+## 2.1.0
+* Forward-ported various changes from 1.21.1.
+* Updated how Enchantability works. It no longer gives Arcana, and instead gives a % chance to boost an enchantment's level by 1 when enchanting.
+  * This can allow enchantments to go over the apoth configured max level.
+  * Enchantments that are over the configured max level are now marked with a star.
+* Fixed the Arcana thresholds being 0/33/66/99 instead of the documented 0/25/75.
+* The enchanting table will now directly call out World Tiers as the source of max eterna limits if Apotheosis is installed.
+* Fixed a bug with Miner's Fervor and instabreak blocks like Sugarcane being unbreakable.
+* Removed a _very_ stale shears dispenser behavior override.
+* Satherov: Added a JEI transfer handler for infusion recipes in the Enchanting Table of the Raven.
+* Tenwoc: Added Ukranian translation.
+* mc-kaishixiaxue: Updated Chinese translation.
+* Quarkrus: Updated Russian translation.
+* t0piy & PrincessStellar: Updated Brazilian translation.
+
 ## 2.0.0
 * Ported to Minecraft 26.1.2.
 * Added the Max Eterna attribute, which allows limiting a player's eterna level.
