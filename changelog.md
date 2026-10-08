@@ -1,3 +1,8 @@
+## 1.6.4
+* Enchantment libraries now respect the configured Apoth max for book extraction.
+* Chainsaw now shows up earlier (Power 40 instead of Power 55).
+* Tenwoc: Added Ukranian translation.
+
 ## 1.6.3
 * Fixed a bug with enchantability bonuses (random +1 enchantment boosts).
 * Fixed the Arcana thresholds being 0/33/66/99 instead of the documented 0/25/75.
